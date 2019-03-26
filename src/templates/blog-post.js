@@ -17,16 +17,28 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1
+          style={{
+            paddingBottom: rhythm(1 / 3),
+          }}
+        >
+          {post.frontmatter.title}
+        </h1>
         <p
           style={{
             ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(1),
+            marginBottom: rhythm(),
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date}
+          <small
+            style={{
+              marginTop: rhythm(4),
+            }}
+          >
+            {post.frontmatter.date}
+          </small>
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr

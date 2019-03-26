@@ -36,6 +36,11 @@ class BlogIndex extends React.Component {
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
+              <hr
+                style={{
+                  marginBottom: rhythm(1),
+                }}
+              />
             </div>
           )
         })}
