@@ -56,7 +56,16 @@ const NewLayout = ({ children }) => (
             }}
           >
             <h3 style={{ display: `inline` }}>
-              {data.site.siteMetadata.title}
+              <Link
+                style={{
+                  boxShadow: `none`,
+                  textDecoration: `none`,
+                  color: `inherit`,
+                }}
+                to={`/`}
+              >
+                {data.site.siteMetadata.title}
+              </Link>
             </h3>
             <ul
               style={{
