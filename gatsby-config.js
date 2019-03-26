@@ -1,12 +1,12 @@
-const config = require("./config/meta/config");
+const config = require("./config/meta/config")
 
 module.exports = {
-	siteMetadata: {
-		title: config.siteTitle,
-		description: config.siteDescription,
-		siteUrl: config.siteUrl,
-		author: config.authorName,
-	},
+  siteMetadata: {
+    title: config.siteTitle,
+    description: config.siteDescription,
+    siteUrl: config.siteUrl,
+    author: config.authorName,
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -20,6 +20,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: `images`,
       },
     },
     {
@@ -56,9 +63,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-				name: config.manifestName,
-				short_name: config.manifestShortName,
-				start_url: config.manifestStartUrl,
+        name: config.manifestName,
+        short_name: config.manifestShortName,
+        start_url: config.manifestStartUrl,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
