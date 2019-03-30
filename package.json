@@ -8,7 +8,8 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "gatsby": "^2.2.11",
+    "babel-plugin-styled-components": "^1.10.0",
+    "gatsby": "^2.3.3",
     "gatsby-cli": "^2.5.2",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-buildtime-timezone": "^1.0.3",
@@ -18,6 +19,7 @@
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.11",
     "gatsby-plugin-sharp": "^2.0.31",
+    "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-typography": "^2.2.10",
     "gatsby-remark-copy-linked-files": "^2.0.11",
     "gatsby-remark-images": "^2.0.6",
@@ -32,6 +34,7 @@
     "react-dom": "^16.8.5",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.19",
+    "styled-components": "^4.2.0",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
     "typography": "^0.16.19",

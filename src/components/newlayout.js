@@ -33,6 +33,21 @@ const NewLayout = ({ children }) => (
             }
           }
         }
+        featured: allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 630) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -41,7 +56,6 @@ const NewLayout = ({ children }) => (
           style={{ maxHeight: "60vh" }}
           fluid={data.file.childImageSharp.fluid}
         />
-
         <div
           style={{
             margin: `0 auto`,
