@@ -38,7 +38,13 @@ class BlogPostTemplate extends React.Component {
               marginTop: rhythm(4),
             }}
           >
-            <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+            <Img
+              style={{
+                borderRadius: `5%`,
+                marginTop: rhythm(1),
+              }}
+              fluid={post.frontmatter.image.childImageSharp.fluid}
+            />
             {post.frontmatter.date}
           </small>
         </p>

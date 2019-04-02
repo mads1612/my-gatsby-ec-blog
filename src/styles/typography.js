@@ -1,39 +1,34 @@
-import Typography from 'typography'
-import fairyGatesTheme from 'typography-theme-fairy-gates'
+import Typography from "typography"
+import fairyGatesTheme from "typography-theme-fairy-gates"
+import { COLORS } from "../constants/index"
 
 fairyGatesTheme.fairyGatesTheme = () => {
   return {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
-		},
-
+    },
   }
 }
 
-fairyGatesTheme.baseFontSize = '18px'
+fairyGatesTheme.baseFontSize = "18px"
 fairyGatesTheme.baseLineHeight = 1.75
 fairyGatesTheme.scaleRatio = 2
 
 fairyGatesTheme.overrideThemeStyles = () => ({
-  'a': {
+  a: {
+    color: COLORS.primary,
     textDecoration: "none",
     backgroundImage: "none",
-	},
+  },
 })
 
-fairyGatesTheme.headerFontFamily = ['Merriweather', 'sans-serif']
-fairyGatesTheme.bodyFontFamily = ['Merriweather', 'sans-serif']
+fairyGatesTheme.headerFontFamily = ["Merriweather", "sans-serif"]
+fairyGatesTheme.bodyFontFamily = ["Merriweather", "sans-serif"]
 fairyGatesTheme.googleFonts = [
   {
-    name: 'Merriweather',
-    styles: [
-      '300',
-      '400',
-      '500',
-      '600',
-      '700'
-    ],
-  }
+    name: "Merriweather",
+    styles: ["300", "400", "500", "600", "700"],
+  },
 ]
 
 const typography = new Typography(fairyGatesTheme)

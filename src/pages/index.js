@@ -48,7 +48,10 @@ class BlogIndex extends React.Component {
               <small>{node.frontmatter.date}</small>
               <PostBox>
                 <PostImage>
-                  <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+                  <Img
+                    style={{ borderRadius: `5%` }}
+                    fluid={node.frontmatter.image.childImageSharp.fluid}
+                  />
                 </PostImage>
                 <PostText>
                   <p

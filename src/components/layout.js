@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Footer from '../components/footer';
+// import { COLORS } from "../constants/index"
+import Footer from "../components/footer"
 import { rhythm } from "../styles/typography"
 
 class Layout extends React.Component {
@@ -61,7 +62,7 @@ class Layout extends React.Component {
       >
         <header>{header}</header>
         <main>{children}</main>
-				<Footer />
+        <Footer />
       </div>
     )
   }
