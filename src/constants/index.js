@@ -36,6 +36,12 @@ export const COLORS = {
   supportingDark2: "#780a0a",
 }
 
-export const FONTS = {
-  catamaran: "Catamaran, sans-serif",
+export const SPACING = {
+  default: "20px",
+  xxs: "2px",
+  xs: "5px",
+  s: "10px",
+  m: "20px",
+  l: "40px",
+  xl: "80px",
 }

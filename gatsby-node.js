@@ -1,3 +1,4 @@
+// TODO - add regex to strim date from folder name -- [0-9]+-+
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 

@@ -2,7 +2,8 @@
 title: "Sticky Brake Hoods"
 date: "2017-05-17"
 layout: post
-draft: true
+draft: false
+author: Chuck Smith
 path: "/sticky-brake-hoods/"
 category: "Category"
 tags:
@@ -20,4 +21,4 @@ So, I was able to do a web search for 1989 Shimano 105 brake hoods and all sorts
 
 > The goal of VeloBase.com is to provide a comprehensive database of vintage cycling knowledge for reference during everything from restorations to general maintenance to researching the cycling history through the equipment of the time.
 
-A quick search and I found out that the groupset had a separate model number "1050." After another search I was able to find a pair of new replica brake hoods at [Amazon.com](https://www.amazon.com/gp/product/B001GSMSJG/ref=oh_aui_detailpage_o06_s00?ie=UTF8&amp;psc=1" target="\_blank" rel="noopener noreferrer) of all places. They are black instead of the original white but I never was crazy about the white anyway. Off to ride again with clean brake hoods.
+A quick search and I found out that the groupset had a separate model number "1050." After another search I was able to find a pair of new replica brake hoods at [Amazon.com](https://www.amazon.com/gp/product/B001GSMSJG/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1%22%20target=%22_blank%22%20rel=%22noopener%20noreferrerhttps://www.google.com) of all places. They are black instead of the original white but I never was crazy about the white anyway. Off to ride again with clean brake hoods.

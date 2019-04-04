@@ -1,23 +1,35 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import { BREAKPOINTS, SPACING } from "../constants"
 
-import Layout from "../components/newlayout"
-import SEO from "../components/seo"
-import { rhythm } from "../styles/typography"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
+// import { rhythm } from "../styles/typography"
+
+import PostHeader from "../components/PostHeader"
+import PostDate from "../components/PostDate"
 
 const PostBox = styled.div`
   display: flex;
+  margin-top: 0.5rem;
+  @media (max-width: ${BREAKPOINTS.alpha}) {
+    flex-flow: row wrap;
+  }
 `
 
 const PostImage = styled.div`
   flex: 25%;
   margin-right: 1rem;
+  @media (max-width: ${BREAKPOINTS.alpha}) {
+    margin-bottom: ${SPACING.m};
+  }
 `
 
 const PostText = styled.div`
   flex: 75%;
+  margin-bottom: 4rem;
 `
 
 class BlogIndex extends React.Component {
@@ -34,18 +46,11 @@ class BlogIndex extends React.Component {
         />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          const postSlug = node.fields.slug
           return (
             <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
+              <PostHeader {...{ postSlug, title }} />
+              <PostDate date={node.frontmatter.date} />
               <PostBox>
                 <PostImage>
                   <Img
@@ -57,11 +62,6 @@ class BlogIndex extends React.Component {
                   <p
                     dangerouslySetInnerHTML={{
                       __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                  <hr
-                    style={{
-                      marginBottom: rhythm(1),
                     }}
                   />
                 </PostText>
@@ -93,7 +93,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
+            author
             image {
               childImageSharp {
                 fluid(maxWidth: 630) {

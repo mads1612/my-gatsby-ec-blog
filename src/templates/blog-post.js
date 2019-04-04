@@ -1,9 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 import { rhythm, scale } from "../styles/typography"
 
 class BlogPostTemplate extends React.Component {
@@ -37,23 +37,9 @@ class BlogPostTemplate extends React.Component {
             style={{
               marginTop: rhythm(4),
             }}
-          >
-            <Img
-              style={{
-                borderRadius: `5%`,
-                marginTop: rhythm(1),
-              }}
-              fluid={post.frontmatter.image.childImageSharp.fluid}
-            />
-            {post.frontmatter.date}
-          </small>
+          />
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
 
         <ul
           style={{
@@ -101,7 +87,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
         image {
           childImageSharp {
             fluid(maxWidth: 630) {

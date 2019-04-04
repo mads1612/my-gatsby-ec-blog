@@ -1,71 +1,91 @@
 import React from "react"
-import { Link } from "gatsby"
+import PropTypes from "prop-types"
+import Helmet from "react-helmet"
+import { StaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+// import reset from "styled-reset"
+// import styledNormalize from "styled-normalize"
+import "typeface-merriweather"
 
-// import { COLORS } from "../constants/index"
-import Footer from "../components/footer"
-import { rhythm } from "../styles/typography"
+import Container from "../components/Container"
+import Navbar from "./Navbar"
+import Footer from "./Footer"
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
-    if (location.pathname === rootPath) {
-      header = (
-        <h3
-          style={{
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
-    return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <Footer />
-      </div>
-    )
+const Body = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  width: 100vw;
+  overflow: hidden;
+  img {
+    margin-bottom: 0;
   }
+`
+
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            author
+            title
+          }
+        }
+        file(relativePath: { regex: "/computer-desk/" }) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        allMenuJson {
+          edges {
+            node {
+              title
+              link
+              id
+            }
+          }
+        }
+        featured: allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 630) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <>
+        <Body>
+          <Helmet title={data.site.siteMetadata.title}>
+            <html lang="en" />
+            <meta
+              name="description"
+              content="I am a serverless and modern application consultant and continously find ways to help my clients unlock value by switching from old school development methodology to a modern approach!"
+            />
+          </Helmet>
+          <Navbar menu={data.allMenuJson.edges} />
+          <Container>{children}</Container>
+          <Footer />
+        </Body>
+      </>
+    )}
+  />
+)
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout
