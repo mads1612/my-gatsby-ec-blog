@@ -13,9 +13,11 @@ import { FaClock } from "react-icons/fa/"
 const MetaBox = styled.div`
   display: flex;
   flex-flow: row wrap;
-  margin: ${SPACING.m} 0;
+  margin: ${SPACING.m};
+  align-items: center;
   font-size: 0.8rem;
   @media (max-width: ${BREAKPOINTS.alpha}) {
+    margin-left: ${SPACING.xxs};
     font-size: 0.7rem;
     padding-right: ${SPACING.xxs};
   }
