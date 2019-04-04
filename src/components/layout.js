@@ -3,8 +3,6 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-// import reset from "styled-reset"
-// import styledNormalize from "styled-normalize"
 import "typeface-merriweather"
 
 import Container from "../components/Container"
