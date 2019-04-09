@@ -24,12 +24,6 @@ fairyGatesTheme.overrideThemeStyles = () => ({
 
 fairyGatesTheme.headerFontFamily = ["Merriweather", "sans-serif"]
 fairyGatesTheme.bodyFontFamily = ["Merriweather", "sans-serif"]
-// fairyGatesTheme.googleFonts = [
-//   {
-//     name: "Merriweather",
-//     styles: ["300", "400", "500", "600", "700"],
-//   },
-// ]
 
 const typography = new Typography(fairyGatesTheme)
 

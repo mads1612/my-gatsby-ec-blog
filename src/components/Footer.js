@@ -12,7 +12,7 @@ const Footer = () => {
           paddingTop: "1rem",
         }}
       >
-        <p>
+        <p align="center">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a> - Last updated on:{" "}

@@ -5,8 +5,8 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import "typeface-merriweather"
 
+import Navbar from "../components/Navbar"
 import Container from "../components/Container"
-import Navbar from "./Navbar"
 import Footer from "./Footer"
 
 const Body = styled.div`
@@ -37,15 +37,6 @@ const Layout = ({ children }) => (
             }
           }
         }
-        allMenuJson {
-          edges {
-            node {
-              title
-              link
-              id
-            }
-          }
-        }
         featured: allMarkdownRemark {
           edges {
             node {
@@ -70,10 +61,10 @@ const Layout = ({ children }) => (
             <html lang="en" />
             <meta
               name="description"
-              content="I am a serverless and modern application consultant and continously find ways to help my clients unlock value by switching from old school development methodology to a modern approach!"
+              content="I am a server-less and modern application consultant and continuously find ways to help my clients unlock value by switching from old school development methodology to a modern approach!"
             />
           </Helmet>
-          <Navbar menu={data.allMenuJson.edges} />
+          <Navbar />
           <Container>{children}</Container>
           <Footer />
         </Body>

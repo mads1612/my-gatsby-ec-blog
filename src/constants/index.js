@@ -20,12 +20,12 @@ export const COLORS = {
   neutralDarkest: "#102a43",
 
   // Primary's - actions, navigation, icons, borders, or emphasize text.
-  primary: "#0f609b",
-  primaryActive: "#2680c2",
-  primaryLight: "#84c5f4",
-  primarylightActive: "#4098d7",
-  primaryDark: "#003e6b",
-  primaryDarkActive: "#0a558c",
+  primaryLightest: "#84c5f4",
+  primaryLighter: "#4098d7",
+  primaryLight: "#2680c2",
+  primaryBase: "#0f609b",
+  primaryDark: "#0a558c",
+  primaryDarker: "#003e6b",
 
   // Supporting - standout section
   supportingLight1: "#bef8fd",
