@@ -10,6 +10,7 @@ const Footer = () => {
         style={{
           marginTop: "3rem",
           paddingTop: "1rem",
+          fontSize: "0.8rem",
         }}
       >
         <p align="center">

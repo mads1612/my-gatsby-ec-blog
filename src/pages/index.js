@@ -2,14 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { BREAKPOINTS, SPACING } from "../constants"
 
+import { BREAKPOINTS, SPACING } from "../constants"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-// import { rhythm } from "../styles/typography"
-
-import PostHeader from "../components/PostHeader"
-import PostDate from "../components/PostDate"
+import { HomeHeader } from "../components/Hero"
+import Container from "../components/Container"
+import PostHeader from "../components/Posts/PostHeader"
+import PostDate from "../components/Posts/PostDate"
 
 const PostBox = styled.div`
   display: flex;
@@ -39,37 +39,42 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          const postSlug = node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <PostHeader {...{ postSlug, title }} />
-              <PostDate date={node.frontmatter.date} />
-              <PostBox>
-                <PostImage>
-                  <Img
-                    style={{ borderRadius: `5%` }}
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
-                  />
-                </PostImage>
-                <PostText>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                </PostText>
-              </PostBox>
-            </div>
-          )
-        })}
-      </Layout>
+      <div>
+        <Layout location={this.props.location} title={siteTitle}>
+          <HomeHeader />
+          <SEO
+            title="All posts"
+            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          />
+          <Container>
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              const postSlug = node.fields.slug
+              return (
+                <div key={node.fields.slug}>
+                  <PostHeader {...{ postSlug, title }} />
+                  <PostDate date={node.frontmatter.date} />
+                  <PostBox>
+                    <PostImage>
+                      <Img
+                        style={{ borderRadius: `5%` }}
+                        fluid={node.frontmatter.image.childImageSharp.fluid}
+                      />
+                    </PostImage>
+                    <PostText>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: node.frontmatter.description || node.excerpt,
+                        }}
+                      />
+                    </PostText>
+                  </PostBox>
+                </div>
+              )
+            })}
+          </Container>
+        </Layout>
+      </div>
     )
   }
 }

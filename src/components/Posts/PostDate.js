@@ -1,6 +1,6 @@
 import React from "react"
-import { COLORS, SPACING } from "../constants"
-import { BREAKPOINTS } from "../constants"
+import { COLORS, SPACING } from "../../constants"
+import { BREAKPOINTS } from "../../constants"
 // import { rhythm } from "../styles/typography"
 import styled from "styled-components"
 import { FaCalendar } from "react-icons/fa/"

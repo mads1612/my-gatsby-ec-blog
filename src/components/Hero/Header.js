@@ -1,0 +1,25 @@
+import styled from "styled-components"
+import React from "react"
+import img from "../../images/computer-desk.jpg"
+
+function HomeHeader({ img, children }) {
+  return <IndexHeader img={img}>{children}</IndexHeader>
+}
+
+const IndexHeader = styled.header`
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(${props => props.img}) center/cover fixed no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 767px) {
+    min-height: 40vh;
+  }
+`
+
+HomeHeader.defaultProps = {
+  img: img,
+}
+
+export { HomeHeader }

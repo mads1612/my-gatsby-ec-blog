@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import { Link } from "gatsby"
-import { COLORS } from "../constants"
-import { rhythm } from "../styles/typography"
+import { COLORS } from "../../constants"
+import { rhythm } from "../../styles/typography"
 
 // TODO rebuild links system
 
