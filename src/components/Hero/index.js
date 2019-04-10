@@ -1,2 +1,3 @@
 import { HomeHeader } from "./Header"
-export { HomeHeader }
+import { Banner } from "./Banner"
+export { HomeHeader, Banner }

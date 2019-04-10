@@ -4,8 +4,10 @@ import styled from "styled-components"
 import { FaAlignRight } from "react-icons/fa"
 
 import { styles } from "../../utils"
+// import useSiteMetadata from "../hooks/useSiteMetadata"
 
 export default function NavbarHeader({ handleNavbar }) {
+  //   const siteTitle = useSiteMetadata()
   return (
     <HeaderWrapper>
       <Link
@@ -17,6 +19,7 @@ export default function NavbarHeader({ handleNavbar }) {
         }}
       >
         Eclectic Saddlebag
+        {/* {siteTitle} */}
       </Link>
       <FaAlignRight
         className="toggle-icon"

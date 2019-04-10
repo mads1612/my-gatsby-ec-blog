@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { styles } from "../utils"
+import { styles } from "../../utils"
+
 export const Banner = ({ title, subtitle, children }) => {
   return (
     <BannerWrapper>
@@ -21,7 +22,7 @@ const BannerWrapper = styled.div`
     ${styles.letterSpacing({ spacing: "0.75rem" })};
   }
   h3 {
-    color: ${styles.neutralLightest};
+    color: ${styles.colors.neutralLightest};
     ${styles.textSlanted};
     ${styles.letterSpacing({ spacing: "0.15rem" })};
     font-size: 1.5rem;

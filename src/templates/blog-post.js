@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 // import Img from "gatsby-image"
 
-import Layout from "../components/Layout"
+import PostLayout from "../templates/PostLayout"
 import SEO from "../components/Seo"
 import { rhythm, scale } from "../styles/typography"
 
@@ -13,7 +13,7 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <PostLayout location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -65,7 +65,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
-      </Layout>
+      </PostLayout>
     )
   }
 }

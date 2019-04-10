@@ -6,7 +6,10 @@ import styled from "styled-components"
 import { BREAKPOINTS, SPACING } from "../constants"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import { HomeHeader } from "../components/Hero"
+import { HomeHeader, Banner } from "../components/Hero"
+import QuickInfo from "../components/SectionInfo/QuickInfo"
+
+import img from "../images/computer-desk.jpg"
 import Container from "../components/Container"
 import PostHeader from "../components/Posts/PostHeader"
 import PostDate from "../components/Posts/PostDate"
@@ -41,7 +44,17 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Layout location={this.props.location} title={siteTitle}>
-          <HomeHeader />
+          <HomeHeader img={img}>
+            <Banner
+              title="Eclectic"
+              subtitle="a broad and diverse range of sources"
+            >
+              {/* <Link to="/menu/" style={{ textDecoration: "none" }}>
+              <BannerButton style={{ margin: "2rem auto" }}>menu</BannerButton>
+            </Link> */}
+            </Banner>
+          </HomeHeader>
+          <QuickInfo />
           <SEO
             title="All posts"
             keywords={[`blog`, `gatsby`, `javascript`, `react`]}
