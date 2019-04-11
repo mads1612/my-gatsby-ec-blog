@@ -1,27 +1,90 @@
-import React from "react"
-import useBuildTime from "./hooks/buildtime"
+import React, { Component } from "react"
+import styled from "styled-components"
+import { styles } from "../utils"
 
-const Footer = () => {
-  const time = useBuildTime()
+import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa"
 
-  return (
-    <>
-      <div
-        style={{
-          marginTop: "3rem",
-          paddingTop: "1rem",
-          fontSize: "0.8rem",
-        }}
-      >
-        <p align="center">
-          © {new Date().getFullYear()}, Built with
+export default class Footer extends Component {
+  state = {
+    icons: [
+      {
+        id: 1,
+        icon: <FaFacebook className="icon facebook-icon" />,
+        path: `https://www.facebook.com`,
+      },
+      {
+        id: 2,
+        icon: <FaTwitter className="icon twitter-icon" />,
+        path: `https://www.facebook.com`,
+      },
+      {
+        id: 3,
+        icon: <FaInstagram className="icon instagram-icon" />,
+        path: `https://www.facebook.com`,
+      },
+    ],
+  }
+  render() {
+    return (
+      <FooterWrapper>
+        <div className="title">Eclectic Saddlebag</div>
+        <div className="icons">
+          {this.state.icons.map(item => (
+            <a
+              href={item.path}
+              key={item.id}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {item.icon}
+            </a>
+          ))}
+        </div>
+        <p className="copyright">
+          Copyright &copy; {new Date().getFullYear()} Eclectic Saddlebag - Built
+          with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a> - Last updated on:{" "}
-          {time}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
         </p>
-      </div>
-    </>
-  )
+      </FooterWrapper>
+    )
+  }
 }
 
-export default Footer
+const FooterWrapper = styled.footer`
+  padding: 2rem 0;
+  background: ${styles.colors.black};
+  .icons {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .icon {
+    color: ${styles.colors.white};
+    font-size: 1.3rem;
+    ${styles.transition({})};
+    &:hover {
+      color: ${styles.colors.vividDarkest};
+    }
+  }
+  .copyright {
+    color: ${styles.colors.white};
+    /* text-transform: capitalize; */
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    text-shadow: none;
+  }
+  .title {
+    text-align: center;
+    width: 30rem;
+    color: ${styles.colors.primaryBase};
+    /* text-transform: uppercase; */
+    font-style: oblique;
+    padding: 0.3rem 1rem;
+    margin: 0 auto 1rem auto;
+    font-size: 1.5rem;
+    /* ${styles.border({ color: `${styles.colors.primaryBase}` })} */
+  }
+`

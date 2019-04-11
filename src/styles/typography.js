@@ -19,6 +19,10 @@ fairyGatesTheme.googleFonts = [
     name: "Merriweather",
     styles: ["300", "400", "500", "600", "700"],
   },
+  {
+    name: "Caveat",
+    styles: ["300", "400", "500", "600", "700"],
+  },
 ]
 
 fairyGatesTheme.overrideThemeStyles = () => ({
@@ -26,6 +30,7 @@ fairyGatesTheme.overrideThemeStyles = () => ({
     color: COLORS.primaryBase,
     textDecoration: "none",
     backgroundImage: "none",
+    textShadow: "none",
   },
   blockquote: {
     borderLeft: `0.3rem solid ${COLORS.primaryBase}`,

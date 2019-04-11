@@ -19,7 +19,6 @@ export default function NavbarHeader({ handleNavbar }) {
         }}
       >
         Eclectic Saddlebag
-        {/* {siteTitle} */}
       </Link>
       <FaAlignRight
         className="toggle-icon"

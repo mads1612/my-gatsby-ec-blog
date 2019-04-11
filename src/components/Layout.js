@@ -1,11 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import "typeface-merriweather"
 
 import Navbar from "../components/Navbar"
-// import Container from "../components/Container"
 import Footer from "./Footer"
 
 const Body = styled.div`
