@@ -63,14 +63,13 @@ const FooterWrapper = styled.footer`
   .icon {
     color: ${styles.colors.white};
     font-size: 1.3rem;
-    ${styles.transition({})};
+    ${styles.transObject({ time: "0.4s" })};
     &:hover {
       color: ${styles.colors.vividDarkest};
     }
   }
   .copyright {
     color: ${styles.colors.white};
-    /* text-transform: capitalize; */
     text-align: center;
     margin: 1rem 0;
     font-size: 0.8rem;
@@ -78,9 +77,8 @@ const FooterWrapper = styled.footer`
   }
   .title {
     text-align: center;
-    width: 30rem;
+    width: 20rem;
     color: ${styles.colors.primaryBase};
-    /* text-transform: uppercase; */
     font-style: oblique;
     padding: 0.3rem 1rem;
     margin: 0 auto 1rem auto;
