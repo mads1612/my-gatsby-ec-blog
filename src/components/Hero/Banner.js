@@ -20,6 +20,9 @@ const BannerWrapper = styled.div`
     font-size: 3rem;
     text-transform: uppercase;
     ${styles.letterSpacing({ spacing: "0.75rem" })};
+    @media (max-width: 767px) {
+      font-size: 2rem;
+    }
   }
   h3 {
     color: ${styles.colors.neutralLightest};

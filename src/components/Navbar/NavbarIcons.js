@@ -46,7 +46,6 @@ const IconWrapper = styled.div`
     margin-right: 1.5rem;
     font-size: 1.3rem;
     cursor: pointer;
-    ${styles.transFunction()};
   }
 
   .facebook-icon {
