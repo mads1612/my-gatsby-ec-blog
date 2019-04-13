@@ -124,7 +124,7 @@ export const pageQuery = graphql`
       }
     }
     hero: allImageSharp(
-      filter: { original: { src: { regex: "/computer-desk/" } } }
+      filter: { original: { src: { regex: "/travel-bag/" } } }
     ) {
       edges {
         node {

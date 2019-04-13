@@ -31,7 +31,7 @@ const BgImage = styled(Image)`
   left: 0;
   width: 100%;
   z-index: -1;
-  height: ${props => props.height || "100vh"};
+  height: ${props => props.height || "80vh"};
   @media (max-width: ${BREAKPOINTS.charlie}) {
       height: 40vh;
     }
