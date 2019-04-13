@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "Tom",
+    "citiesVisited": ["Paris", "London", "Sydney"]
+  },
+  {
+    "id": "2",
+    "name": "Jane",
+    "citiesVisited": ["Paris"]
+  },
+  {
+    "id": "3",
+    "name": "Eve",
+    "citiesVisited": ["Paris", "London", "Sydney", "Berlin"]
+  }
+]

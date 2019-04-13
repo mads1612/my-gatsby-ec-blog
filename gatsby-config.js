@@ -1,4 +1,4 @@
-const config = require("./src/constants/meta/config")
+const config = require("./data/config")
 
 module.exports = {
   siteMetadata: {
@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
+        path: `${__dirname}/src/images/assets`,
         name: `assets`,
       },
     },
@@ -27,6 +27,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/images`,
         name: `images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/data`,
+        name: `data`,
       },
     },
     {
@@ -76,7 +83,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `src/images/assets/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
