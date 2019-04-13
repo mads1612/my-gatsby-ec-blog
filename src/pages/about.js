@@ -1,7 +1,5 @@
 import React, { Fragment } from "react"
 import { graphql } from "gatsby"
-// import { COLORS, FONTS } from '../constants'
-// import { bs } from '../shevy'
 import Seo from "../components/Seo"
 import PostLayout from "../templates/PostLayout"
 
@@ -13,13 +11,13 @@ const About = ({ data }) => {
     <Fragment>
       <PostLayout>
         <Seo title="About" keywords={["About", "Chuck Smith"]} />
-
         <h1>About</h1>
         <p>
           <img
             css={{
               display: "block",
               borderRadius: "5%",
+              padding: "1rem 2rem",
             }}
             src={imgSrcPassion}
             alt="Passion led us here."
@@ -28,7 +26,7 @@ const About = ({ data }) => {
           3.2 frames site build exclusively in MS Notepad, a horrendous
           undertaking by todays standards. I have dabbled with many Content
           Management Systems (CMS) over the years:
-          <ul>
+          <ul style={{ paddingTop: "1rem" }}>
             <li>
               <a href="https://www.phpnuke.org/">PHPNuke</a>
             </li>
@@ -57,6 +55,7 @@ const About = ({ data }) => {
           css={{
             display: "block",
             borderRadius: "5%",
+            padding: "1rem 2rem",
           }}
           src={imgSrcBuilding}
           alt="Aerial view of buildings"
@@ -85,25 +84,8 @@ const About = ({ data }) => {
           In this field, I developed a desire to learn, fostering a passion for
           creativity in design.
         </p>
-        <h3>Ministry</h3>
-        <p>
-          Each day, I push myself on a journey of constant, incremental, almost
-          annoyingly incessant improvement. The same goes for my work. If I
-          realize three months, six months, a year later that there is a much
-          better, more efficient, more logical way to accomplish something, I
-          take the time to make the improvement. It just doesn’t make sense (at
-          least to me) to leave anything in an inferior state.
-        </p>
-
-        <h3>More Interested In My Resume?</h3>
-        <p>
-          You can find my resume on my{" "}
-          <a href="https://kyleshevlin.github.io">Github Page</a> and see the
-          work I do on my{" "}
-          <a href="https://github.com/kyleshevlin">Github Profile</a>. You can
-          also look at the <a href="/portfolio">Portfolio</a> page to see
-          highlights of my recent work.
-        </p>
+        <h3>Ministry</h3> // TODO Finish About Page
+        <p>Each day,</p>
       </PostLayout>
     </Fragment>
   )
@@ -112,7 +94,7 @@ const About = ({ data }) => {
 export default About
 
 export const query = graphql`
-  query AnnaKyleImageQuery {
+  query aboutImageQuery {
     passion: allImageSharp(
       filter: { original: { src: { regex: "/passion-feet/" } } }
     ) {

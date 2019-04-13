@@ -10,6 +10,7 @@ import SEO from "../components/Seo"
 import { HomeHeader, Banner } from "../components/Hero"
 import QuickInfo from "../components/SectionInfo/QuickInfo"
 
+import { Title } from "../components/SectionInfo/Title"
 import Container from "../components/Container"
 import PostHeader from "../components/Posts/PostHeader"
 import PostDate from "../components/Posts/PostDate"
@@ -59,6 +60,7 @@ class BlogIndex extends React.Component {
             title="All posts"
             keywords={[`blog`, `gatsby`, `javascript`, `react`]}
           />
+          <Title message={""} title={"Latest Articles"} />
           <Container>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
