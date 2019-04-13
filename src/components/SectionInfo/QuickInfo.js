@@ -12,13 +12,13 @@ export default class QuickInfo extends Component {
         <Title message={"Life is random"} title={"My Random Thoughts"} />
         <QuickInfoWrapper>
           <p className="text">
-            Pariatur elit laborum dolor laborum tempor. Exercitation dolor ea
-            voluptate aliquip sunt. Elit qui do enim proident sunt adipisicing
-            sint est anim elit enim aliqua. Elit et cillum id laboris magna id
-            id ad culpa et ad voluptate. Minim nulla minim pariatur aliquip elit
-            sint dolor veniam ex labore.
+            Life is a journey, and along the way, we all collect thoughts,
+            experiences, and learn. The word <em>eclectic</em> best describes
+            this collection, a collection which can be described as random. Here
+            on this site, you can learn a little about me, engage of the random
+            thoughts I have, and experience a little of what I have.
           </p>
-          <Link to="/" style={{ textDecoration: `none` }}>
+          <Link to="/about" style={{ textDecoration: `none` }}>
             <SectionButton style={{ margin: `2rem auto` }}>About</SectionButton>
           </Link>
         </QuickInfoWrapper>
