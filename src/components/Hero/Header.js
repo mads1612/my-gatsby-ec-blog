@@ -2,6 +2,7 @@
 import React from "react"
 import Image from "gatsby-image"
 import styled from "styled-components"
+import { BREAKPOINTS } from "../../constants"
 
 const Container = styled.div`
   display: flex;
@@ -31,6 +32,9 @@ const BgImage = styled(Image)`
   width: 100%;
   z-index: -1;
   height: ${props => props.height || "100vh"};
+  @media (max-width: ${BREAKPOINTS.charlie}) {
+      height: 40vh;
+    }
 
   // Adjust image positioning (if image covers area with defined height) and add font-family for polyfill
   & > img {
