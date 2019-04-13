@@ -29,13 +29,14 @@ export default class NavbarLinks extends Component {
 }
 
 const LinkWrapper = styled.ul`
+  margin-bottom: 0;
   li {
     list-style-type: none;
   }
   .nav-link {
     display: block;
     text-decoration: none;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
     color: ${styles.colors.neutralDarkest};
     font-weight: 700;
     text-transform: capitalize;
@@ -44,7 +45,7 @@ const LinkWrapper = styled.ul`
     &:hover {
       background: ${styles.colors.neutralLightest};
       color: ${styles.colors.primaryBase};
-      padding: 0.5rem 1rem 0.5rem 1.3rem;
+      padding: 0.5rem 1rem 0rem 1.3rem;
     }
   }
   height: ${props => (props.open ? "180px" : "0px")};
