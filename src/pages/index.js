@@ -1,3 +1,4 @@
+// ec-blog -- /src/components/pages/index.js.
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -9,7 +10,6 @@ import SEO from "../components/Seo"
 import { HomeHeader, Banner } from "../components/Hero"
 import QuickInfo from "../components/SectionInfo/QuickInfo"
 
-import img from "../images/computer-desk.jpg"
 import Container from "../components/Container"
 import PostHeader from "../components/Posts/PostHeader"
 import PostDate from "../components/Posts/PostDate"
@@ -44,7 +44,7 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Layout location={this.props.location} title={siteTitle}>
-          <HomeHeader img={img}>
+          <HomeHeader fluid={data.hero.edges[0].node.fluid}>
             <Banner
               title="Eclectic"
               subtitle="a broad and diverse range of sources"
@@ -119,6 +119,19 @@ export const pageQuery = graphql`
                 }
               }
             }
+          }
+        }
+      }
+    }
+    hero: allImageSharp(
+      filter: { original: { src: { regex: "/computer-desk/" } } }
+    ) {
+      edges {
+        node {
+          fluid(
+            duotone: { highlight: "#000000", shadow: "#222222", opacity: 20 }
+          ) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
