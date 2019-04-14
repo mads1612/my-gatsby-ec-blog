@@ -1,10 +1,9 @@
 import React from "react"
-import { rhythm } from "styled-component"
+import { rhythm } from "../../styles/typography"
 
-// TODO use rhythm
 const PostContent = ({ content }) => (
   <div
-    css={{ marginBottom: rhythm() }}
+    css={{ marginBottom: rhythm(1) }}
     dangerouslySetInnerHTML={{ __html: content }}
   />
 )

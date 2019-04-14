@@ -5,8 +5,8 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 import { BREAKPOINTS, SPACING } from "../constants"
+import Seo from "../components/Seo"
 import Layout from "../components/Layout"
-import SEO from "../components/Seo"
 import { HomeHeader, Banner } from "../components/Hero"
 import QuickInfo from "../components/SectionInfo/QuickInfo"
 
@@ -14,6 +14,7 @@ import { Title } from "../components/SectionInfo/Title"
 import Container from "../components/Container"
 import PostHeader from "../components/Posts/PostHeader"
 import PostDate from "../components/Posts/PostDate"
+import PostContent from "../components/Posts/PostContent"
 
 const PostBox = styled.div`
   display: flex;
@@ -45,6 +46,7 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Layout location={this.props.location} title={siteTitle}>
+          <Seo title={siteTitle} keywords={["About", "Chuck Smith"]} />
           <HomeHeader fluid={data.hero.edges[0].node.fluid}>
             <Banner
               title="Eclectic"
@@ -56,10 +58,6 @@ class BlogIndex extends React.Component {
             </Banner>
           </HomeHeader>
           <QuickInfo />
-          <SEO
-            title="All posts"
-            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-          />
           <Title message={""} title={"Latest Articles"} />
           <Container>
             {posts.map(({ node }) => {
@@ -68,7 +66,11 @@ class BlogIndex extends React.Component {
               return (
                 <div key={node.fields.slug}>
                   <PostHeader {...{ postSlug, title }} />
-                  <PostDate date={node.frontmatter.date} />
+                  <PostDate
+                    date={node.frontmatter.date}
+                    author={node.frontmatter.author}
+                    readTime={node.timeToRead}
+                  />
                   <PostBox>
                     <PostImage>
                       <Img
@@ -77,11 +79,7 @@ class BlogIndex extends React.Component {
                       />
                     </PostImage>
                     <PostText>
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: node.frontmatter.description || node.excerpt,
-                        }}
-                      />
+                      <PostContent content={node.excerpt} />
                     </PostText>
                   </PostBox>
                 </div>
@@ -107,6 +105,7 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          timeToRead
           fields {
             slug
           }

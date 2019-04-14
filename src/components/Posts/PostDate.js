@@ -40,7 +40,7 @@ const DateBox = styled.div`
 `
 
 const AuthorBox = styled.div`
-  padding-right: ${SPACING.m};
+  padding: 0 ${SPACING.m};
   /* font-size: 0.8rem; */
   @media (max-width: ${BREAKPOINTS.alpha}) {
     padding-right: ${SPACING.xss};
@@ -54,6 +54,7 @@ const AuthorBox = styled.div`
 `
 
 const TimeBox = styled.div`
+  padding-right: ${SPACING.m};
   @media (max-width: ${BREAKPOINTS.alpha}) {
     font-size: 0.7rem;
     /* display: none; */
@@ -63,17 +64,18 @@ const TimeBox = styled.div`
   }
 `
 
-const PostDate = ({ date }) => (
+const PostDate = ({ date, author, readTime }) => (
   <div>
     <MetaBox>
       <DateBox>
-        <FaCalendar style={{ color: COLORS.primaryDarkActive }} /> {date}
+        <FaCalendar style={{ color: COLORS.primaryBase }} /> {date}
       </DateBox>
       <AuthorBox>
-        <FaUser style={{ color: COLORS.primaryDarkActive }} /> {date}
+        <FaUser style={{ color: COLORS.primaryBase }} /> {author}
       </AuthorBox>
       <TimeBox>
-        <FaClock style={{ color: COLORS.primaryDarkActive }} /> {date}
+        <FaClock style={{ color: COLORS.primaryBase }} /> {""}
+        {readTime} min to read
       </TimeBox>
     </MetaBox>
   </div>
