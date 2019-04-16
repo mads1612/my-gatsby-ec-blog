@@ -7,7 +7,7 @@ import styled from "styled-components"
 import { BREAKPOINTS, SPACING } from "../constants"
 import Seo from "../components/Seo"
 import Layout from "../components/Layout"
-import { HomeHeader, Banner } from "../components/Hero"
+import { HomeHeader } from "../components/Hero"
 import QuickInfo from "../components/SectionInfo/QuickInfo"
 
 import { Title } from "../components/SectionInfo/Title"
@@ -15,6 +15,7 @@ import Container from "../components/Container"
 import PostHeader from "../components/Posts/PostHeader"
 import PostDate from "../components/Posts/PostDate"
 import PostContent from "../components/Posts/PostContent"
+import HeroText from "../components/Hero/HeroText"
 
 const PostBox = styled.div`
   display: flex;
@@ -48,14 +49,15 @@ class BlogIndex extends React.Component {
         <Layout location={this.props.location} title={siteTitle}>
           <Seo title={siteTitle} keywords={["About", "Chuck Smith"]} />
           <HomeHeader fluid={data.hero.edges[0].node.fluid}>
-            <Banner
+            <HeroText />
+            {/* <Banner
               title="Eclectic"
               subtitle="a broad and diverse range of sources"
-            >
-              {/* <Link to="/menu/" style={{ textDecoration: "none" }}>
+            > */}
+            {/* <Link to="/menu/" style={{ textDecoration: "none" }}>
               <BannerButton style={{ margin: "2rem auto" }}>menu</BannerButton>
             </Link> */}
-            </Banner>
+            {/* </Banner> */}
           </HomeHeader>
           <QuickInfo />
           <Title message={""} title={"Latest Articles"} />
