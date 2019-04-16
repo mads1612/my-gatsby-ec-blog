@@ -7,9 +7,6 @@ import { FaCalendar } from "react-icons/fa/"
 import { FaUser } from "react-icons/fa/"
 import { FaClock } from "react-icons/fa/"
 
-// TODO add read time
-// TODO add media breaks to meta
-
 const MetaBox = styled.div`
   display: flex;
   flex-flow: row wrap;

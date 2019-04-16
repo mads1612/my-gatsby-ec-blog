@@ -5,8 +5,6 @@ import { rhythm } from "../../styles/typography"
 import styled from "styled-components"
 import { styles } from "../../utils"
 
-// TODO rebuild links system
-
 const postLinkStyles = {
   display: "block",
   color: `${styles.colors.neutralDark}`,
