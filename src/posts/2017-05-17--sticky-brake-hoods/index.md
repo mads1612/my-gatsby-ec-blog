@@ -1,13 +1,11 @@
 ---
 title: "Sticky Brake Hoods"
-date: "2017-05-17"
+date: 2017-05-17
 layout: post
-draft: false
 author: Chuck Smith
-path: "/sticky-brake-hoods/"
-category: "Category"
 tags:
-  - "Tag"
+category:
+draft: false
 image: "./brakehoods.jpg"
 ---
 

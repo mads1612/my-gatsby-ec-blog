@@ -1,7 +1,10 @@
 ---
 title: My Second Post!
-date: "2015-05-06T23:46:37.121Z"
+date: 2020-02-26
 author: Chuck Smith
+tags:
+category:
+draft: false
 image: "./salty_egg.jpg"
 ---
 

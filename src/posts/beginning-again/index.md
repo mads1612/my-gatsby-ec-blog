@@ -1,10 +1,11 @@
 ---
 title: "Beginning Again"
 slug: "beginning-again"
-date: "2017-05-11"
+date: 2017-05-11
 author: Chuck Smith
-category: "Category"
 tags:
+category:
+draft: false
 image: "./sirrus-img.png"
 ---
 
