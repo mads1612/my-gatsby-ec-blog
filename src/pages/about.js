@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Seo from "../components/Seo"
 import PostLayout from "../templates/PostLayout"
 
+// TODO - design author box
 const About = ({ data }) => {
   const imgSrcPassion = data.passion.edges[0].node.original.src
   const imgSrcBuilding = data.building.edges[0].node.original.src
@@ -47,7 +48,7 @@ const About = ({ data }) => {
         <p>
           This site is my experiment with{" "}
           <a href="https://gatsby.org">GatsbyJS</a>, which I am learning to
-          love, especially the concept of a website as React App.
+          love, especially the concept of a website as a React App.
         </p>
         <h2>Career</h2>
         <h3>Construction</h3>
@@ -77,15 +78,30 @@ const About = ({ data }) => {
             </a>
           </li>
           <li>
-            <a href="https://www.www.tekla.com/us">Xsteel</a>
+            <a href="https://www.tekla.com/us">Xsteel</a>
           </li>
         </ul>
         <p>
           In this field, I developed a desire to learn, fostering a passion for
           creativity in design.
         </p>
-        <h3>Ministry</h3> // TODO Finish About Page
-        <p>Each day,</p>
+        <h3>Ministry</h3>
+        <p>
+          I never imagined that one day I will enter into pastoral ministry, but
+          I have, and for the last decade I have served in several Methodist
+          Churches as a pastor. I am currently a seminary student at{" "}
+          <a href="https://www.www.tekla.com/us">United Theological Seminary</a>
+          . I enjoy being in relationships with people and walking through life
+          with them, journeying with them in there own personal relationships
+          with God.
+        </p>
+        <h3>Eclectic Life</h3>
+        <p>
+          Life is a journey. From technology, construction, to ministry, this
+          has been an <em>eclectic</em> life. This is just my story. If you take
+          time to look at yours, I am sure you will see a journey which is
+          diverse and unique.
+        </p>
       </PostLayout>
     </Fragment>
   )
