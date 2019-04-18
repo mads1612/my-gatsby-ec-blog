@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { FaAlignRight } from "react-icons/fa"
 
 import { styles } from "../../utils"
-// import useSiteMetadata from "../hooks/useSiteMetadata"
 
 export default function NavbarHeader({ handleNavbar }) {
   //   const siteTitle = useSiteMetadata()

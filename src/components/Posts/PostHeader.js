@@ -1,6 +1,5 @@
 import React, { Fragment } from "react"
 import { Link } from "gatsby"
-// import { COLORS } from "../../constants"
 import { rhythm } from "../../styles/typography"
 import styled from "styled-components"
 import { styles } from "../../utils"

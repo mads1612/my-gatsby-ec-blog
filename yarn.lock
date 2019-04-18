@@ -4744,13 +4744,6 @@ gatsby-plugin-buildtime-timezone@^1.0.3:
   dependencies:
     moment-timezone "^0.5.15"
 
-gatsby-plugin-draft@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-draft/-/gatsby-plugin-draft-0.0.3.tgz#6f60409290078e8490b2449cba472a24fdb523d0"
-  integrity sha512-q9a578YMBBal+auPvoLDHrsRqJHl7RMuL/1VMMba3jm32Y0n6BAPD9TCJG+cfkm3CUIEZwBhEVyqMVrJq7qHkg==
-  dependencies:
-    moment-timezone "^0.5.23"
-
 gatsby-plugin-feed@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.1.0.tgz#5d0d201dbf0a25cc57106fa7a0ffed60564a6cad"
@@ -5452,13 +5445,6 @@ gray-percentage@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/gray-percentage/-/gray-percentage-2.0.0.tgz#b72a274d1b1379104a0050b63b207dc53fe56f99"
   integrity sha1-tyonTRsTeRBKAFC2OyB9xT/lb5k=
-
-grid-styled@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/grid-styled/-/grid-styled-5.0.2.tgz#1e81d7d5bde50a9b43d81cf111b81399126fe595"
-  integrity sha512-kM3kewM77sBifQLZUZD9meoMSXOZE9ArxxM9XZ6qtwb4B2ylHYHH9Ylkt96hDMHA32J+LoEeYoHAvn6+j4fn9Q==
-  dependencies:
-    system-components "^3.0.0"
 
 gud@^1.0.0:
   version "1.0.0"
@@ -7609,7 +7595,7 @@ modularscale@^1.0.2:
   dependencies:
     lodash.isnumber "^3.0.0"
 
-moment-timezone@^0.5.15, moment-timezone@^0.5.23:
+moment-timezone@^0.5.15:
   version "0.5.23"
   resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.23.tgz#7cbb00db2c14c71b19303cb47b0fb0a6d8651463"
   integrity sha512-WHFH85DkCfiNMDX5D3X7hpNH3/PUhjTGcD0U1SgfBGZxJ3qUmJh5FdvaFjcClxOvB3rzdfj4oRffbI38jEnC1w==
@@ -10982,14 +10968,6 @@ styled-reset@^2.0.6:
     opencollective "^1.0.3"
     opencollective-postinstall "2.0.2"
 
-styled-system@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-3.2.1.tgz#491e1e6f88d7ee021f6f49376f12852cde8007cb"
-  integrity sha512-ag0Yp7UeVHHc3t+1uM3jvlljaZYzwqpbJ8hMrFvpaKfUd8xsB9JeQXLwMpEsz8iLx8Lz/+9j0coWFZjmw8MogQ==
-  dependencies:
-    "@babel/runtime" "^7.1.2"
-    prop-types "^15.6.2"
-
 styled-system@^4.0.6:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-4.1.0.tgz#e5a58be23b89cf8fb7b181c8e425ab107b166693"
@@ -11060,13 +11038,6 @@ symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
-
-system-components@^3.0.0:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/system-components/-/system-components-3.0.3.tgz#068449867de23b5365d88f9fb21a9460039a25bf"
-  integrity sha512-AqxDTwE+nizKW5aiNz4CdvMK9SDY681p2JIQM10jppCF/j6OWFc5fRvloWZyD7k+BSmDHH/sDsdCO6+f3s7FtQ==
-  dependencies:
-    styled-system "^3.2.1"
 
 table@^5.2.3:
   version "5.2.3"

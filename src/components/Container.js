@@ -1,5 +1,5 @@
 import React from "react"
-import { BREAKPOINTS } from "../constants"
+import { styles } from "../utils"
 import { createMediaQuery } from "../utils/styles"
 
 const Container = ({ children }) => (
@@ -8,13 +8,13 @@ const Container = ({ children }) => (
       marginLeft: "auto",
       marginRight: "auto",
       width: "80%",
-      [createMediaQuery(BREAKPOINTS.bravo)]: {
+      [createMediaQuery(`${styles.breakpoints.bravo}`)]: {
         width: "70%",
       },
-      [createMediaQuery(BREAKPOINTS.charlie)]: {
+      [createMediaQuery(`${styles.breakpoints.charlie}`)]: {
         width: "60%",
       },
-      [createMediaQuery(BREAKPOINTS.delta)]: {
+      [createMediaQuery(`${styles.breakpoints.delta}`)]: {
         width: "50%",
       },
     }}

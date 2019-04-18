@@ -1,6 +1,6 @@
 import Typography from "typography"
 import fairyGatesTheme from "typography-theme-fairy-gates"
-import { COLORS } from "../constants"
+import { styles } from "../utils"
 
 fairyGatesTheme.fairyGatesTheme = () => {
   return {
@@ -27,15 +27,15 @@ fairyGatesTheme.googleFonts = [
 
 fairyGatesTheme.overrideThemeStyles = () => ({
   a: {
-    color: COLORS.primaryBase,
+    color: `${styles.colors.primaryBase}`,
     textDecoration: "none",
     backgroundImage: "none",
     textShadow: "none",
   },
   blockquote: {
-    borderLeft: `0.3rem solid ${COLORS.primaryBase}`,
-    color: COLORS.primaryBase,
-    backgroundColor: COLORS.neutralLightest,
+    borderLeft: `0.3rem solid ${styles.colors.primaryBase}`,
+    color: `${styles.colors.primaryBase}`,
+    backgroundColor: `${styles.colors.neutralLightest}`,
     padding: `2rem`,
   },
 })

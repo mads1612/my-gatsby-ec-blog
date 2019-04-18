@@ -1,6 +1,5 @@
 import React from "react"
-import { COLORS, SPACING } from "../../constants"
-import { BREAKPOINTS } from "../../constants"
+import { styles } from "../../utils"
 // import { rhythm } from "../styles/typography"
 import styled from "styled-components"
 import { FaCalendar } from "react-icons/fa/"
@@ -10,53 +9,53 @@ import { FaClock } from "react-icons/fa/"
 const MetaBox = styled.div`
   display: flex;
   flex-flow: row wrap;
-  margin: ${SPACING.m};
+  margin: ${styles.spacing.m};
   align-items: center;
   font-size: 0.8rem;
-  @media (max-width: ${BREAKPOINTS.alpha}) {
-    margin-left: ${SPACING.xxs};
+  @media (max-width: ${styles.breakpoints.alpha}) {
+    margin-left: ${styles.spacing.xxs};
     font-size: 0.7rem;
-    padding-right: ${SPACING.xxs};
+    padding-right: ${styles.spacing.xxs};
   }
-  @media (max-width: ${BREAKPOINTS.bravo}) {
+  @media (max-width: ${styles.breakpoints.bravo}) {
     font-size: 0.8rem;
-    padding-right: ${SPACING.s};
+    padding-right: ${styles.spacing.s};
   }
 `
 
 const DateBox = styled.div`
-  padding-right: ${SPACING.m};
-  @media (max-width: ${BREAKPOINTS.alpha}) {
-    padding-right: ${SPACING.xxs};
+  padding-right: ${styles.spacing.m};
+  @media (max-width: ${styles.breakpoints.alpha}) {
+    padding-right: ${styles.spacing.xxs};
     font-size: 0.7rem;
   }
-  @media (max-width: ${BREAKPOINTS.bravo}) {
-    padding-right: ${SPACING.s};
+  @media (max-width: ${styles.breakpoints.bravo}) {
+    padding-right: ${styles.spacing.s};
     font-size: 0.8rem;
   }
 `
 
 const AuthorBox = styled.div`
-  padding: 0 ${SPACING.m};
+  padding: 0 ${styles.spacing.m};
   /* font-size: 0.8rem; */
-  @media (max-width: ${BREAKPOINTS.alpha}) {
-    padding-right: ${SPACING.xss};
+  @media (max-width: ${styles.breakpoints.alpha}) {
+    padding-right: ${styles.spacing.xss};
     font-size: 0.7rem;
     display: none;
   }
-  @media (max-width: ${BREAKPOINTS.bravo}) {
-    padding-right: ${SPACING.xxs};
+  @media (max-width: ${styles.breakpoints.bravo}) {
+    padding-right: ${styles.spacing.xxs};
     font-size: 0.8rem;
   }
 `
 
 const TimeBox = styled.div`
-  padding-right: ${SPACING.m};
-  @media (max-width: ${BREAKPOINTS.alpha}) {
+  padding-right: ${styles.spacing.m};
+  @media (max-width: ${styles.breakpoints.alpha}) {
     font-size: 0.7rem;
     /* display: none; */
   }
-  @media (max-width: ${BREAKPOINTS.bravo}) {
+  @media (max-width: ${styles.breakpoints.bravo}) {
     font-size: 0.8rem;
   }
 `
@@ -65,13 +64,13 @@ const PostDate = ({ date, author, readTime }) => (
   <div>
     <MetaBox>
       <DateBox>
-        <FaCalendar style={{ color: COLORS.primaryBase }} /> {date}
+        <FaCalendar style={{ color: `${styles.colors.primaryBase}` }} /> {date}
       </DateBox>
       <AuthorBox>
-        <FaUser style={{ color: COLORS.primaryBase }} /> {author}
+        <FaUser style={{ color: `${styles.colors.primaryBase}` }} /> {author}
       </AuthorBox>
       <TimeBox>
-        <FaClock style={{ color: COLORS.primaryBase }} /> {""}
+        <FaClock style={{ color: `${styles.colors.primaryBase}` }} /> {""}
         {readTime} min to read
       </TimeBox>
     </MetaBox>

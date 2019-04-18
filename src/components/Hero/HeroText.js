@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Typist from "react-typist"
-import { BREAKPOINTS } from "../../constants"
+import { styles } from "../../utils"
 
 const StyledTypist = styled(Typist)`
   color: #fff;
@@ -12,7 +12,7 @@ const StyledTypist = styled(Typist)`
   font-weight: 100;
   /* text-transform: capitalize; */
   font-family: "Raleway";
-  @media (max-width: ${BREAKPOINTS.charlie}) {
+  @media (max-width: ${styles.breakpoints.charlie}) {
     display: none;
   }
 `

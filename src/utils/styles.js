@@ -55,7 +55,7 @@ export const breakpoints = {
   delta: "1350px",
 }
 
-export const SPACING = {
+export const spacing = {
   default: "20px",
   xxs: "2px",
   xs: "5px",

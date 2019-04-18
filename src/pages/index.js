@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
-import { BREAKPOINTS, SPACING } from "../constants"
+import { styles } from "../utils"
 import Seo from "../components/Seo"
 import Layout from "../components/Layout"
 import { HomeHeader } from "../components/Hero"
@@ -20,7 +20,7 @@ import HeroText from "../components/Hero/HeroText"
 const PostBox = styled.div`
   display: flex;
   margin-top: 0.5rem;
-  @media (max-width: ${BREAKPOINTS.alpha}) {
+  @media (max-width: ${styles.breakpoints.alpha}) {
     flex-flow: row wrap;
   }
 `
@@ -28,8 +28,8 @@ const PostBox = styled.div`
 const PostImage = styled.div`
   flex: 25%;
   margin-right: 1rem;
-  @media (max-width: ${BREAKPOINTS.alpha}) {
-    margin-bottom: ${SPACING.m};
+  @media (max-width: ${styles.breakpoints.alpha}) {
+    margin-bottom: ${styles.spacing.m};
   }
 `
 

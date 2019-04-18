@@ -4,6 +4,7 @@ import Seo from "../components/Seo"
 import PostLayout from "../templates/PostLayout"
 
 // TODO - design author box
+
 const About = ({ data }) => {
   const imgSrcPassion = data.passion.edges[0].node.original.src
   const imgSrcBuilding = data.building.edges[0].node.original.src
@@ -17,7 +18,7 @@ const About = ({ data }) => {
           <img
             css={{
               display: "block",
-              borderRadius: "5%",
+              borderRadius: "5% !important",
               padding: "1rem 2rem",
             }}
             src={imgSrcPassion}
