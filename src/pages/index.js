@@ -15,7 +15,6 @@ import Container from "../components/Container"
 import PostHeader from "../components/Posts/PostHeader"
 import PostDate from "../components/Posts/PostDate"
 import PostContent from "../components/Posts/PostContent"
-import HeroText from "../components/Hero/HeroText"
 
 const PostBox = styled.div`
   display: flex;
@@ -48,9 +47,7 @@ class BlogIndex extends React.Component {
       <div>
         <Layout location={this.props.location} title={siteTitle}>
           <Seo title={siteTitle} keywords={["About", "Chuck Smith"]} />
-          <HomeHeader fluid={data.hero.edges[0].node.fluid}>
-            {/* <HeroText /> */}
-          </HomeHeader>
+          <HomeHeader fluid={data.hero.edges[0].node.fluid} />
           <QuickInfo />
           <Title message={""} title={"Latest Articles"} />
           <Container>

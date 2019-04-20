@@ -2,7 +2,6 @@ const config = require("./data/config")
 
 module.exports = {
   siteMetadata: {
-    //navbarLinks: [{ to: "/", name: Home }, { to: "/about", name: "About" }],
     title: config.siteTitle,
     description: config.siteDescription,
     siteUrl: config.siteUrl,
@@ -12,7 +11,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/posts`,
+        path: `${__dirname}/content/posts`,
         name: `posts`,
       },
     },
@@ -66,7 +65,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
