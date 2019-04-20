@@ -49,15 +49,7 @@ class BlogIndex extends React.Component {
         <Layout location={this.props.location} title={siteTitle}>
           <Seo title={siteTitle} keywords={["About", "Chuck Smith"]} />
           <HomeHeader fluid={data.hero.edges[0].node.fluid}>
-            <HeroText />
-            {/* <Banner
-              title="Eclectic"
-              subtitle="a broad and diverse range of sources"
-            > */}
-            {/* <Link to="/menu/" style={{ textDecoration: "none" }}>
-              <BannerButton style={{ margin: "2rem auto" }}>menu</BannerButton>
-            </Link> */}
-            {/* </Banner> */}
+            {/* <HeroText /> */}
           </HomeHeader>
           <QuickInfo />
           <Title message={""} title={"Latest Articles"} />
