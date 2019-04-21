@@ -12,18 +12,6 @@ fairyGatesTheme.fairyGatesTheme = () => {
 fairyGatesTheme.baseFontSize = "18px"
 fairyGatesTheme.baseLineHeight = 1.75
 fairyGatesTheme.scaleRatio = 2
-fairyGatesTheme.headerFontFamily = ["Merriweather", "sans-serif"]
-fairyGatesTheme.bodyFontFamily = ["Merriweather", "sans-serif"]
-fairyGatesTheme.googleFonts = [
-  {
-    name: "Merriweather",
-    styles: ["300", "400", "500", "600", "700"],
-  },
-  {
-    name: "Caveat",
-    styles: ["300", "400", "500", "600", "700"],
-  },
-]
 
 fairyGatesTheme.overrideThemeStyles = () => ({
   a: {

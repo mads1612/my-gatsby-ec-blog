@@ -10,6 +10,7 @@ import Layout from "../components/Layout"
 import { HomeHeader } from "../components/Hero"
 import QuickInfo from "../components/SectionInfo/QuickInfo"
 
+import { GlobalStyles } from "../utils/GlobalStyles"
 import { Title } from "../components/SectionInfo/Title"
 import Container from "../components/Container"
 import PostHeader from "../components/Posts/PostHeader"
@@ -45,6 +46,7 @@ class BlogIndex extends React.Component {
 
     return (
       <div>
+        <GlobalStyles />
         <Layout location={this.props.location} title={siteTitle}>
           <Seo title={siteTitle} keywords={["About", "Chuck Smith"]} />
           <HomeHeader fluid={data.hero.edges[0].node.fluid} />

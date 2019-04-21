@@ -65,7 +65,10 @@ export const spacing = {
   xl: "80px",
 }
 
-export const textSlanted = `font-family:'Caveat', cursive;`
+export const setFont = {
+  main: "font-family: 'Merriweather', serif;",
+  slanted: "font-family:'Caveat', cursive;",
+}
 
 export const transDefault = "transition:all 0.5s ease-in-out"
 

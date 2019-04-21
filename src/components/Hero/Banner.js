@@ -26,7 +26,7 @@ const BannerWrapper = styled.div`
   }
   h3 {
     color: ${styles.colors.neutralLightest};
-    ${styles.textSlanted};
+    ${styles.setFont.slanted};
     ${styles.letterSpacing({ spacing: "0.15rem" })};
     font-size: 1.5rem;
     text-transform: capitalize;
