@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 
 import PostLayout from "../templates/PostLayout"
 import SEO from "../components/Seo"
-import { rhythm, scale } from "../styles/typography"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -20,22 +19,21 @@ class BlogPostTemplate extends React.Component {
         />
         <h1
           style={{
-            paddingBottom: rhythm(1 / 3),
+            paddingBottom: `0.5rem`,
           }}
         >
           {post.frontmatter.title}
         </h1>
         <p
           style={{
-            ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(),
-            marginTop: rhythm(-1),
+            marginBottom: `1rem`,
+            marginTop: `1rem`,
           }}
         >
           <small
             style={{
-              marginTop: rhythm(4),
+              marginTop: `1rem`,
             }}
           />
         </p>

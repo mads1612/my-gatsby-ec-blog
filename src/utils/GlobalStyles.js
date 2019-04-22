@@ -8,45 +8,54 @@ const GlobalStyles = createGlobalStyle`
  margin:0;
  padding:0;
  box-sizing:border-box;
+ text-decoration: none;
 }
 body{
- font-size:100%;
- color: ${colors.neutralDark};
+ font-size:113%;
+ line-height:1.75;
+ color: ${colors.neutralDarker};
  background:${colors.white};
  ${setFont.main};
-
+}
+a {
+    text-decoration: none;
+    color: ${colors.neutralDarkest}
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     ${setFont.main}
+    text-decoration: none;
+    ${colors.neutralDarkest}
 }
 h1{
- font-size:2em;
+ font-size:2rem;
  line-height:1.2;
- margin-bottom:0.5em
+ margin-bottom:0.5rem
 }
 h2{
- font-size:1.5em;
- margin-bottom:0.75em
+ font-size:1.5rem;
+ margin-bottom:0.75rem
 }
 h3{
- font-size:1.2em;
+ font-size:1.2rem;
  line-height:1;
- margin-bottom:1em
+ margin-bottom:1rem
 }
 h4{
- font-size:1.125em;
+ font-size:1.125rem;
  line-height:1.2;
- margin-bottom:1.25em;
+ margin-bottom:1.25rem;
 }
 h5{
- font-size:1em;
- margin-bottom:1.5em;
+ font-size:1rem;
+ margin-bottom:1.5rem;
 }
 h6{
- font-size:1em;
+ font-size:1rem;
 }
-p{
+p, div {
+ ${setFont.main}
+ font-size: 1rem;
  line-height:1.75;
  margin:0 0 1.5rem 0;
 }

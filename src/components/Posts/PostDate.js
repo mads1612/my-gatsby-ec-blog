@@ -9,9 +9,8 @@ import { FaClock } from "react-icons/fa/"
 const MetaBox = styled.div`
   display: flex;
   flex-flow: row wrap;
-  margin: ${styles.spacing.m};
   align-items: center;
-  font-size: 0.8rem;
+  margin-bottom: 0;
   @media (max-width: ${styles.breakpoints.alpha}) {
     margin-left: ${styles.spacing.xxs};
     font-size: 0.7rem;
@@ -24,7 +23,9 @@ const MetaBox = styled.div`
 `
 
 const DateBox = styled.div`
+  font-size: 0.8rem !important;
   padding-right: ${styles.spacing.m};
+  margin-bottom: 0;
   @media (max-width: ${styles.breakpoints.alpha}) {
     padding-right: ${styles.spacing.xxs};
     font-size: 0.7rem;
@@ -37,7 +38,8 @@ const DateBox = styled.div`
 
 const AuthorBox = styled.div`
   padding: 0 ${styles.spacing.m};
-  /* font-size: 0.8rem; */
+  font-size: 0.8rem;
+  margin-bottom: 0;
   @media (max-width: ${styles.breakpoints.alpha}) {
     padding-right: ${styles.spacing.xss};
     font-size: 0.7rem;
@@ -51,9 +53,10 @@ const AuthorBox = styled.div`
 
 const TimeBox = styled.div`
   padding-right: ${styles.spacing.m};
+  font-size: 0.8rem !important;
+  margin-bottom: 0;
   @media (max-width: ${styles.breakpoints.alpha}) {
     font-size: 0.7rem;
-    /* display: none; */
   }
   @media (max-width: ${styles.breakpoints.bravo}) {
     font-size: 0.8rem;

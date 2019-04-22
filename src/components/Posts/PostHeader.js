@@ -1,6 +1,5 @@
 import React, { Fragment } from "react"
 import { Link } from "gatsby"
-import { rhythm } from "../../styles/typography"
 import styled from "styled-components"
 import { styles } from "../../utils"
 
@@ -10,6 +9,7 @@ const postLinkStyles = {
 }
 
 const TitleWrapper = styled.h2`
+  margin-bottom: 0;
   &:hover {
     color: ${styles.colors.primaryBase};
   }
@@ -20,7 +20,7 @@ const PostHeader = ({ postSlug, title }) => {
   const wrapProps = postSlug ? { css: postLinkStyles, to: postSlug } : {}
 
   return (
-    <header css={{ marginBottom: rhythm(0) }}>
+    <header>
       <Wrap {...wrapProps}>
         <TitleWrapper>{title}</TitleWrapper>
       </Wrap>

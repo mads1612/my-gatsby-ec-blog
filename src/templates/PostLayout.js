@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import "typeface-merriweather"
 
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import { GlobalStyles } from "../utils"
 
 const Body = styled.div`
   display: flex;
@@ -18,6 +18,7 @@ const PostLayout = ({ children }) => (
   <div>
     <Body>
       <Navbar />
+      <GlobalStyles />
       <div
         style={{
           margin: `0 auto`,

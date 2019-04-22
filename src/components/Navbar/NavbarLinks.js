@@ -36,6 +36,7 @@ const LinkWrapper = styled.ul`
   .nav-link {
     display: block;
     text-decoration: none;
+    margin-bottom: 1.2rem;
     padding: 1rem 1rem 0.5rem 1rem;
     color: ${styles.colors.neutralDarkest};
     font-weight: 700;

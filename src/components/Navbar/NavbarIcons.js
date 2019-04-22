@@ -1,5 +1,8 @@
 import React, { Component } from "react"
-import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa"
+// import { FaInstagram } from "react-icons/fa"
+import { FacebookSquare } from "styled-icons/fa-brands/FacebookSquare"
+import { Twitter } from "styled-icons/fa-brands/Twitter"
+import { Instagram } from "styled-icons/fa-brands/Instagram"
 import styled from "styled-components"
 import { styles } from "../../utils"
 
@@ -8,17 +11,17 @@ export default class NavbarIcons extends Component {
     icons: [
       {
         id: 1,
-        icon: <FaFacebook className="icon facebook-icon" />,
+        icon: <FacebookSquare className="icon facebook-icon" />,
         path: `https://www.facebook.com/RevChuckSmith`,
       },
       {
         id: 2,
-        icon: <FaTwitter className="icon twitter-icon" />,
+        icon: <Twitter className="icon twitter-icon" />,
         path: `https://www.twitter.com/polishedwp`,
       },
       {
         id: 3,
-        icon: <FaInstagram className="icon instagram-icon" />,
+        icon: <Instagram className="icon instagram-icon" />,
         path: `https://www.instagram.com/webrev`,
       },
     ],
@@ -44,6 +47,8 @@ export default class NavbarIcons extends Component {
 const IconWrapper = styled.div`
   .icon {
     margin-right: 1.5rem;
+    margin-bottom: 0;
+    padding-top: 0.5rem;
     font-size: 1.3rem;
     cursor: pointer;
   }
