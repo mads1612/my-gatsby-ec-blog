@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { GlobalStyles } from "../utils"
 
 import Navbar from "../components/Navbar"
 import Footer from "./Footer"
@@ -14,13 +15,16 @@ const Body = styled.div`
 `
 
 const Layout = ({ children }) => (
-  <div>
-    <Body>
-      <Navbar />
-      {children}
-    </Body>
-    <Footer />
-  </div>
+  <>
+    <GlobalStyles />
+    <div>
+      <Body>
+        <Navbar />
+        {children}
+      </Body>
+      <Footer />
+    </div>
+  </>
 )
 
 Layout.propTypes = {

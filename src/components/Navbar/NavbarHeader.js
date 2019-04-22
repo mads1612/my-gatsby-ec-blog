@@ -33,6 +33,7 @@ const HeaderWrapper = styled.div`
   padding: 0.6rem 1rem;
   display: flex;
   align-items: center;
+  margin-bottom: 0;
   justify-content: space-between;
   .toggle-icon {
     font-size: 1.75rem;

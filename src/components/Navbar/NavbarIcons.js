@@ -28,7 +28,7 @@ export default class NavbarIcons extends Component {
   }
   render() {
     return (
-      <IconWrapper>
+      <IconWrapper style={{ marginBottom: 0, marginTop: -10 }}>
         {this.state.icons.map(item => (
           <a
             href={item.path}
