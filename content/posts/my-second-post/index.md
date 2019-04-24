@@ -2,8 +2,8 @@
 title: My Second Post!
 date: 2019-04-17
 author: Chuck Smith
-tags:
-category:
+tags: ["eggs", "exercise"]
+category: "cooking"
 draft: false
 image: "./salty_egg.jpg"
 ---
