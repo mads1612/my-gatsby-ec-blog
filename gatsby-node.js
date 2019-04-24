@@ -1,12 +1,14 @@
 // TODO - add regex to trim date from folder name -- [0-9]+-+
 const path = require(`path`)
+const _ = require("lodash")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  const blogList = path.resolve(`./src/templates/blog-list-template.js`)
+  const ExcerptList = path.resolve(`./src/templates/ExcerptList.js`)
+  const tagTemplate = path.resolve("src/templates/tags.js")
   return graphql(
     `
       {
@@ -21,6 +23,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                tags
               }
             }
           }
@@ -50,14 +53,35 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Create blog-list pages
+    // Tag pages
+    let tags = []
+    _.each(posts, edge => {
+      if (_.get(edge, "node.frontmatter.tags")) {
+        tags = tags.concat(edge.node.frontmatter.tags)
+      }
+    })
+    // Eliminate duplicate tags
+    tags = _.uniq(tags)
+
+    // Make tag pages
+    tags.forEach(tag => {
+      createPage({
+        path: `/tags/${_.kebabCase(tag)}/`,
+        component: tagTemplate,
+        context: {
+          tag,
+        },
+      })
+    })
+
+    // Create ExcerptList pages
     const postsPerPage = 5
     const numPages = Math.ceil(posts.length / postsPerPage)
 
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
         path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-        component: blogList,
+        component: ExcerptList,
         context: {
           limit: postsPerPage,
           skip: i * postsPerPage,

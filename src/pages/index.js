@@ -6,7 +6,7 @@ import styled from "styled-components"
 
 import { styles } from "../utils"
 import Seo from "../components/Seo"
-import Layout from "../components/Layout"
+import Layout from "../components/Layouts/Layout"
 import { HomeHeader } from "../components/Hero"
 import QuickInfo from "../components/SectionInfo/QuickInfo"
 
@@ -106,6 +106,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             author
+            tags
             image {
               childImageSharp {
                 fluid(maxWidth: 630) {

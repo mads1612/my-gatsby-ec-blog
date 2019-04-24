@@ -1,8 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-// import Img from "gatsby-image"
 
-import PostLayout from "../templates/PostLayout"
+import PostLayout from "../components/Layouts/PostLayout"
 import SEO from "../components/Seo"
 
 class BlogPostTemplate extends React.Component {

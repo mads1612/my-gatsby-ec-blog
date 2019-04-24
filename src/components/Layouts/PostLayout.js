@@ -2,9 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
-import { GlobalStyles } from "../utils"
+import Navbar from "../Navbar/Navbar"
+import Image from "../hooks/blogimage"
+import Footer from "../Footer"
+import { GlobalStyles } from "../../utils"
 
 const Body = styled.div`
   display: flex;
@@ -18,11 +19,12 @@ const PostLayout = ({ children }) => (
   <div>
     <Body>
       <Navbar />
+      <Image />
       <GlobalStyles />
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: 800,
           padding: `0px 1.0875rem 1.45rem`,
           paddingTop: 0,
         }}

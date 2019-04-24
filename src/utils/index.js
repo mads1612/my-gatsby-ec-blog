@@ -2,4 +2,12 @@ import * as styles from "./styles"
 import { Section } from "../components/SectionInfo/Section"
 import { GlobalStyles } from "./GlobalStyles"
 import { BannerButton, SectionButton } from "./Buttons"
-export { styles, BannerButton, GlobalStyles, SectionButton, Section }
+import { formatStrForPath } from "./formatStr"
+export {
+  styles,
+  formatStrForPath,
+  BannerButton,
+  GlobalStyles,
+  SectionButton,
+  Section,
+}

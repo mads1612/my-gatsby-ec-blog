@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import { graphql } from "gatsby"
 import Seo from "../components/Seo"
-import PostLayout from "../templates/PostLayout"
+import PostLayout from "../components/Layouts/PostLayout"
 
 // TODO - design author box
 
@@ -19,7 +19,8 @@ const About = ({ data }) => {
             css={{
               display: "block",
               borderRadius: "5% !important",
-              padding: "1rem 2rem",
+              padding: "1rem",
+              maxWidth: "800px",
             }}
             src={imgSrcPassion}
             alt="Passion led us here."
@@ -57,7 +58,8 @@ const About = ({ data }) => {
           css={{
             display: "block",
             borderRadius: "5%",
-            padding: "1rem 2rem",
+            padding: "1rem",
+            maxWidth: "800px",
           }}
           src={imgSrcBuilding}
           alt="Aerial view of buildings"
