@@ -20,6 +20,7 @@ export default function NavbarHeader({ handleNavbar }) {
         Eclectic Saddlebag
       </Link>
       <MenuAltRight
+        size="40"
         className="toggle-icon"
         onClick={() => {
           handleNavbar()

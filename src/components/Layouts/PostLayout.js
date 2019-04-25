@@ -21,16 +21,15 @@ const PostLayout = ({ children }) => (
       <Navbar />
       <Image />
       <GlobalStyles />
-      <div
+      <PostWrapper
         style={{
           margin: `0 auto`,
-          maxWidth: 800,
           padding: `0px 1.0875rem 1.45rem`,
           paddingTop: 0,
         }}
       >
         {children}
-      </div>
+      </PostWrapper>
     </Body>
     <Footer />
   </div>
@@ -41,3 +40,7 @@ PostLayout.propTypes = {
 }
 
 export default PostLayout
+
+const PostWrapper = styled.div`
+  max-width: 800;
+`
