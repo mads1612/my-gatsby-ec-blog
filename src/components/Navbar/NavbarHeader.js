@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { FaAlignRight } from "react-icons/fa"
+import { MenuAltRight } from "styled-icons/boxicons-regular/MenuAltRight"
 
 import { setColor } from "../../utils/styles"
 
@@ -19,7 +19,7 @@ export default function NavbarHeader({ handleNavbar }) {
       >
         Eclectic Saddlebag
       </Link>
-      <FaAlignRight
+      <MenuAltRight
         className="toggle-icon"
         onClick={() => {
           handleNavbar()

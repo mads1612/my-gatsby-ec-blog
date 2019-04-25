@@ -1,9 +1,9 @@
 import React from "react"
 import { breakpoints, setColor, setRem } from "../../utils/styles"
 import styled from "styled-components"
-import { FaCalendar } from "react-icons/fa/"
-import { FaUser } from "react-icons/fa/"
-import { FaClock } from "react-icons/fa/"
+import { Calendar } from "styled-icons/boxicons-regular/Calendar"
+import { User } from "styled-icons/fa-solid/User"
+import { Clock } from "styled-icons/fa-solid/Clock"
 
 const MetaBox = styled.div`
   display: flex;
@@ -66,13 +66,13 @@ const PostDate = ({ date, author, readTime }) => (
   <div>
     <MetaBox>
       <DateBox>
-        <FaCalendar style={{ color: `${setColor.primaryBase}` }} /> {date}
+        <Calendar style={{ color: `${setColor.primaryBase}` }} /> {date}
       </DateBox>
       <AuthorBox>
-        <FaUser style={{ color: `${setColor.primaryBase}` }} /> {author}
+        <User style={{ color: `${setColor.primaryBase}` }} /> {author}
       </AuthorBox>
       <TimeBox>
-        <FaClock style={{ color: `${setColor.primaryBase}` }} /> {""}
+        <Clock style={{ color: `${setColor.primaryBase}` }} /> {""}
         {readTime} min to read
       </TimeBox>
     </MetaBox>

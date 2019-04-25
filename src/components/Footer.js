@@ -2,25 +2,26 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { setColor, setTransition } from "../utils/styles"
 
-// TODO change icon library
-import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa"
+import { FacebookSquare } from "styled-icons/fa-brands/FacebookSquare"
+import { Twitter } from "styled-icons/fa-brands/Twitter"
+import { Instagram } from "styled-icons/fa-brands/Instagram"
 
 export default class Footer extends Component {
   state = {
     icons: [
       {
         id: 1,
-        icon: <FaFacebook className="icon facebook-icon" />,
+        icon: <FacebookSquare size="24" className="icon facebook-icon" />,
         path: `https://www.facebook.com`,
       },
       {
         id: 2,
-        icon: <FaTwitter className="icon twitter-icon" />,
+        icon: <Twitter size="24" className="icon twitter-icon" />,
         path: `https://www.facebook.com`,
       },
       {
         id: 3,
-        icon: <FaInstagram className="icon instagram-icon" />,
+        icon: <Instagram size="24" className="icon instagram-icon" />,
         path: `https://www.facebook.com`,
       },
     ],
@@ -56,15 +57,15 @@ const FooterWrapper = styled.footer`
   padding: 2rem 0;
   background: ${setColor.black};
   .icons {
-    width: 10rem;
+    width: 8rem;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
   }
   .icon {
     color: ${setColor.white};
-    font-size: 1.3rem;
-    ${setTransition({ time: "0.4s" })};
+    font-size: 0.5rem;
+    ${setTransition({ time: "0.3s" })};
     &:hover {
       color: ${setColor.vividDarkest};
     }
