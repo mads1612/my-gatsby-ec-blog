@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components"
-import { setFont, colors } from "./styles"
+import { setFont, setColor } from "./styles"
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Caveat|Merriweather:300,400,700');
@@ -13,19 +13,19 @@ const GlobalStyles = createGlobalStyle`
 body{
  font-size:113%;
  line-height:1.75;
- color: ${colors.neutralDarker};
- background:${colors.white};
+ color: ${setColor.neutralDarker};
+ background:${setColor.white};
  ${setFont.main};
 }
 a {
     text-decoration: none;
-    color: ${colors.primaryBase}
+    color: ${setColor.primaryBase}
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     ${setFont.main}
     text-decoration: none;
-    ${colors.neutralDarkest}
+    ${setColor.neutralDarkest}
 }
 h1{
  font-size:2rem;

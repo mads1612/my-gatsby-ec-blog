@@ -1,17 +1,17 @@
 import React, { Fragment } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { styles } from "../../utils"
+import { setColor } from "../../utils/styles"
 
 const postLinkStyles = {
   display: "block",
-  color: `${styles.colors.neutralDark}`,
+  color: `${setColor.neutralDark}`,
 }
 
 const TitleWrapper = styled.h2`
   margin-bottom: 0;
   &:hover {
-    color: ${styles.colors.primaryBase};
+    color: ${setColor.primaryBase};
   }
 `
 

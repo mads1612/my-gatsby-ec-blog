@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { css } from "styled-components"
 import { lighten } from "polished"
-import { styles } from "../../utils"
+import { setColor, setFont } from "../../utils/styles"
 
 const baseItemStyles = css`
   display: inline-block;
@@ -15,19 +15,19 @@ const baseItemStyles = css`
 
 const itemStyles = css`
   ${baseItemStyles};
-  background-color: ${styles.colors.primaryBase};
-  color: ${styles.colors.white};
+  background-color: ${setColor.primaryBase};
+  color: ${setColor.white};
 
   &:hover {
-    background-color: ${lighten(0.1, styles.colors.primaryBase)};
-    color: ${styles.colors.white};
+    background-color: ${lighten(0.1, setColor.primaryBase)};
+    color: ${setColor.white};
   }
 `
 
 const nonLinkItemStyles = css`
   ${baseItemStyles};
-  background-color: ${styles.colors.neutralLighter};
-  color: ${styles.colors.primaryBase};
+  background-color: ${setColor.neutralLighter};
+  color: ${setColor.primaryBase};
 `
 
 const Pagination = ({ index: currentPageIndex, totalPages }) => {
@@ -38,7 +38,7 @@ const Pagination = ({ index: currentPageIndex, totalPages }) => {
   return (
     <div
       css={{
-        fontFamily: `${styles.setFont.main}`,
+        fontFamily: `${setFont.main}`,
         marginBottom: `1rem`,
       }}
     >

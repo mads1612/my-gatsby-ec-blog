@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
-import { styles } from "../utils"
+import { breakpoints, setRem } from "../utils/styles"
 import Seo from "../components/Seo"
 import Layout from "../components/Layouts/Layout"
 import { HomeHeader } from "../components/Hero"
@@ -20,7 +20,7 @@ import PostContent from "../components/Posts/PostContent"
 const PostBox = styled.div`
   display: flex;
   margin-top: 0.5rem;
-  @media (max-width: ${styles.breakpoints.alpha}) {
+  @media (max-width: ${breakpoints.alpha}) {
     flex-flow: row wrap;
   }
 `
@@ -28,8 +28,8 @@ const PostBox = styled.div`
 const PostImage = styled.div`
   flex: 25%;
   margin-right: 1rem;
-  @media (max-width: ${styles.breakpoints.alpha}) {
-    margin-bottom: ${styles.spacing.m};
+  @media (max-width: ${breakpoints.alpha}) {
+    margin-bottom: ${setRem(20)};
   }
 `
 
@@ -51,7 +51,11 @@ class BlogIndex extends React.Component {
           <Seo title={siteTitle} keywords={["About", "Chuck Smith"]} />
           <HomeHeader fluid={data.hero.edges[0].node.fluid} />
           <QuickInfo />
-          <Title message={""} title={"Latest Articles"} />
+          <Title
+            style={{ paddingTop: "1rem" }}
+            message={""}
+            title={"Latest Articles"}
+          />
           <Container>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug

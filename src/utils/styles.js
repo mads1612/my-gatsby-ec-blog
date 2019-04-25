@@ -2,7 +2,7 @@
 import { css } from "styled-components"
 
 // Color Palette 2
-export const colors = {
+export const setColor = {
   // colors
   black: "#333",
   white: "#ffffff",
@@ -51,25 +51,6 @@ export const colors = {
   supportingBrightDarkest: "#780A0A",
 }
 
-// TODO - remove breakpoints
-export const breakpoints = {
-  alpha: "481px",
-  bravo: "769px",
-  charlie: "1025px",
-  delta: "1350px",
-}
-
-// TODO - remove spacing
-export const spacing = {
-  default: "20px",
-  xxs: "2px",
-  xs: "5px",
-  s: "10px",
-  m: "20px",
-  l: "40px",
-  xl: "80px",
-}
-
 // Setter Functions
 export const setFont = {
   main: "font-family: 'Merriweather', serif;",
@@ -113,25 +94,9 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
   return acc
 }, {})
 
-export const setTransition = ({
-  property = "all",
-  time = "0.3s",
-  timing = "ease-in-out",
-} = {}) => {
-  return `transition:${property} ${time} ${timing}`
-}
-
 export const transDefault = "transition:all 0.5s ease-in-out"
 
-export const transFunction = (
-  property = "all",
-  time = "0.5s",
-  type = "linear"
-) => {
-  return `transition:${property} ${time} ${type}`
-}
-
-export const transObject = ({
+export const setTransition = ({
   property = "all",
   time = "0.5s",
   type = "ease-in-out",
@@ -139,27 +104,13 @@ export const transObject = ({
   return `transition: ${property} ${time} ${type}`
 }
 
-export const transition = ({
-  property = "all",
-  time = "0.5s",
-  type = "ease-in-out",
-}) => {
-  return `transition: ${property} ${time} ${type}`
+// TODO - remove breakpoints
+export const breakpoints = {
+  alpha: "481px",
+  bravo: "769px",
+  charlie: "1025px",
+  delta: "1350px",
 }
-
-// TODO - remove border
-// export const border = ({
-//   width = "0.15rem",
-//   type = "solid",
-//   color = "white",
-// }) => {
-//   return `border:${width} ${type} ${color}`
-// }
-
-// TODO - remove letterspacing
-// export const letterSpacing = ({ spacing = "0.1rem" }) => {
-//   return `letter-spacing:${spacing}`
-// }
 
 // TODO - remove media query
 export const createMediaQuery = breakpoint =>

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { setLetterSpacing, colors, setFont } from "../../utils/styles"
+import { setLetterSpacing, setColor, setFont } from "../../utils/styles"
 export function Title({ title, message }) {
   return (
     <TitleWrapper>
@@ -21,7 +21,7 @@ const TitleWrapper = styled.div`
     ${setFont.slanted};
     ${setLetterSpacing(4)};
     font-size: 2rem;
-    color: ${colors.mainYellow};
+    color: ${setColor.mainYellow};
   }
   h1 {
     ${setLetterSpacing(4)};
@@ -31,7 +31,7 @@ const TitleWrapper = styled.div`
   .underline {
     width: 5rem;
     height: 0.2rem;
-    background: ${colors.mainYellow};
+    background: ${setColor.mainYellow};
     margin: 0.5rem auto;
   }
 `

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { colors, setFont, setLetterSpacing } from "../../utils/styles"
+import { setColor, setFont, setLetterSpacing } from "../../utils/styles"
 
 export const Banner = ({ title, subtitle, children }) => {
   return (
@@ -16,7 +16,7 @@ const BannerWrapper = styled.div`
   margin-bottom: 3rem;
   text-align: center;
   h1 {
-    color: ${colors.neutralLightest};
+    color: ${setColor.neutralLightest};
     font-size: 3rem;
     text-transform: uppercase;
     ${setLetterSpacing(14)};
@@ -25,7 +25,7 @@ const BannerWrapper = styled.div`
     }
   }
   h3 {
-    color: ${colors.neutralLightest};
+    color: ${setColor.neutralLightest};
     ${setFont.slanted};
     ${setLetterSpacing()};
     font-size: 1.5rem;

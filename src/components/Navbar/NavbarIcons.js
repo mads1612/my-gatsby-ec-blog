@@ -4,7 +4,7 @@ import { FacebookSquare } from "styled-icons/fa-brands/FacebookSquare"
 import { Twitter } from "styled-icons/fa-brands/Twitter"
 import { Instagram } from "styled-icons/fa-brands/Instagram"
 import styled from "styled-components"
-import { styles } from "../../utils"
+import { setColor } from "../../utils/styles"
 
 export default class NavbarIcons extends Component {
   state = {
@@ -63,7 +63,7 @@ const IconWrapper = styled.div`
     color: #da5f53;
   }
   .icon:hover {
-    color: ${styles.colors.vividDarkest};
+    color: ${setColor.vividDarkest};
   }
   display: none;
   @media (min-width: 768px) {

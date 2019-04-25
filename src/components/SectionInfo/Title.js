@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { styles } from "../../utils"
+import { setFont, setLetterSpacing, setColor } from "../../utils/styles"
+
 export function Title({ title, message }) {
   return (
     <TitleWrapper>
@@ -18,21 +19,21 @@ Title.defaultProps = {
 const TitleWrapper = styled.div`
   text-align: center;
   h3 {
-    ${styles.setFont.slanted};
-    ${styles.letterSpacing({ spacing: "0.3rem" })};
+    ${setFont.slanted};
+    ${setLetterSpacing(4)};
     font-size: 2rem;
-    color: ${styles.colors.primaryLight};
+    color: ${setColor.primaryLight};
   }
   h1 {
-    ${styles.letterSpacing({ spacing: "0.3rem" })};
+    ${setLetterSpacing(4)};
     font-size: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     /* text-transform: uppercase; */
   }
   .underline {
     width: 10rem;
     height: 0.2rem;
-    background: ${styles.colors.primaryLight};
+    background: ${setColor.primaryLight};
     margin: 0.5rem auto;
   }
 `

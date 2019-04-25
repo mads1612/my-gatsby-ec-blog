@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { colors, transObject } from "../utils/styles"
+import { setColor, setTransition } from "../utils/styles"
 
 // TODO change icon library
 import { FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa"
@@ -54,7 +54,7 @@ export default class Footer extends Component {
 
 const FooterWrapper = styled.footer`
   padding: 2rem 0;
-  background: ${colors.black};
+  background: ${setColor.black};
   .icons {
     width: 10rem;
     display: flex;
@@ -62,15 +62,15 @@ const FooterWrapper = styled.footer`
     margin: 0 auto;
   }
   .icon {
-    color: ${colors.white};
+    color: ${setColor.white};
     font-size: 1.3rem;
-    ${transObject({ time: "0.4s" })};
+    ${setTransition({ time: "0.4s" })};
     &:hover {
-      color: ${colors.vividDarkest};
+      color: ${setColor.vividDarkest};
     }
   }
   .copyright {
-    color: ${colors.white};
+    color: ${setColor.white};
     text-align: center;
     margin: 1rem 0;
     font-size: 0.8rem;
@@ -79,7 +79,7 @@ const FooterWrapper = styled.footer`
   .title {
     text-align: center;
     width: 20rem;
-    color: ${colors.primaryBase};
+    color: ${setColor.primaryBase};
     font-style: oblique;
     padding: 0.3rem 1rem;
     margin: 0 auto 1rem auto;

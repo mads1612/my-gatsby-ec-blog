@@ -1,32 +1,31 @@
 import styled from "styled-components"
-import { styles } from "../utils"
-import { setBorder } from "../utils/styles"
+import { setColor, setBorder, setTransition } from "../utils/styles"
 
 const BannerButton = styled.button`
   display: block;
-  color: ${styles.colors.mainWhite};
+  color: ${setColor.white};
   background: transparent;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   font-size: 1.5rem;
   letter-spacing: 0.5rem;
   font-weight: 700;
-  ${setBorder({ color: `${styles.colors.white}` })};
+  ${setBorder({ color: `${setColor.white}` })};
   margin-top: 1rem;
-  ${styles.transition({})};
+  ${setTransition({ time: "0.4s" })};
   &:hover {
-    background: ${styles.colors.white};
-    color: ${styles.colors.black};
+    background: ${setColor.white};
+    color: ${setColor.black};
     cursor: pointer;
   }
 `
 
 const SectionButton = styled(BannerButton)`
-  color: ${styles.colors.black};
-  ${setBorder({ color: `${styles.colors.black}` })};
+  color: ${setColor.black};
+  ${setBorder({ color: `${setColor.black}` })};
   &:hover {
-    background: ${styles.colors.black};
-    color: ${styles.colors.primaryBase};
+    background: ${setColor.black};
+    color: ${setColor.primaryBase};
     cursor: pointer;
   }
 `

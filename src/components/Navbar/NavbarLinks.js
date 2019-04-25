@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { styles } from "../../utils"
+import { setColor, transDefault, setTransition } from "../../utils/styles"
 
 export default class NavbarLinks extends Component {
   state = {
@@ -38,27 +38,27 @@ const LinkWrapper = styled.ul`
     text-decoration: none;
     margin-bottom: 1.2rem;
     padding: 1rem 1rem 0.5rem 1rem;
-    color: ${styles.colors.neutralDarkest};
+    color: ${setColor.neutralDarkest};
     font-weight: 700;
     text-transform: capitalize;
     cursor: pointer;
-    ${styles.transDefault};
+    ${transDefault};
     &:hover {
-      background: ${styles.colors.neutralLightest};
-      color: ${styles.colors.primaryBase};
+      background: ${setColor.neutralLightest};
+      color: ${setColor.primaryBase};
       padding: 0.5rem 1rem 0rem 1.3rem;
     }
   }
   height: ${props => (props.open ? "180px" : "0px")};
   overflow: hidden;
-  ${styles.transObject({ time: "0.4s" })};
+  ${setTransition({ time: "0.4s" })};
 
   @media (min-width: 768px) {
     height: auto;
     display: flex;
     margin: 0 auto;
     .nav-link:hover {
-      background: ${styles.colors.neutralLighter};
+      background: ${setColor.neutralLighter};
       padding: 0.5rem 1rem 0.5rem 1rem;
     }
   }
