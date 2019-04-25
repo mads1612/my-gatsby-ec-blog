@@ -2,7 +2,7 @@
 import React from "react"
 import Image from "gatsby-image"
 import styled from "styled-components"
-import { styles } from "../../utils"
+import { breakpoints } from "../../utils/styles"
 
 const Container = styled.div`
   display: flex;
@@ -32,7 +32,7 @@ const BgImage = styled(Image)`
   width: 100%;
   z-index: -1;
   height: ${props => props.height || "80vh"};
-  @media (max-width: ${styles.breakpoints.charlie}) {
+  @media (max-width: ${breakpoints.charlie}) {
       height: 40vh;
     }
 

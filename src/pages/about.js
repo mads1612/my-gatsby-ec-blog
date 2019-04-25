@@ -29,7 +29,7 @@ const About = ({ data }) => {
           3.2 frames site build exclusively in MS Notepad, a horrendous
           undertaking by todays standards. I have dabbled with many Content
           Management Systems (CMS) over the years:
-          <ul style={{ paddingTop: "1rem" }}>
+          <ul>
             <li>
               <a href="https://www.phpnuke.org/">PHPNuke</a>
             </li>
@@ -53,7 +53,7 @@ const About = ({ data }) => {
           love, especially the concept of a website as a React App.
         </p>
         <h2>Career</h2>
-        <h3>Construction</h3>
+
         <img
           css={{
             display: "block",
@@ -64,11 +64,12 @@ const About = ({ data }) => {
           src={imgSrcBuilding}
           alt="Aerial view of buildings"
         />
+        <h3>Construction</h3>
         <p>
           I spend over twenty years in the construction industry learning to
           enhance drafting techniques, using the latest technologies:
         </p>
-        <ul>
+        <ul style={{ paddingBottom: `1rem` }}>
           <li>
             <a href="http://www.autodesk.com/">AutoCAD</a>
           </li>

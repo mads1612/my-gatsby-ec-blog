@@ -1,3 +1,6 @@
+// my-ec-blog-default
+import { css } from "styled-components"
+
 // Color Palette 2
 export const colors = {
   // colors
@@ -48,6 +51,7 @@ export const colors = {
   supportingBrightDarkest: "#780A0A",
 }
 
+// TODO - remove breakpoints
 export const breakpoints = {
   alpha: "481px",
   bravo: "769px",
@@ -55,6 +59,7 @@ export const breakpoints = {
   delta: "1350px",
 }
 
+// TODO - remove spacing
 export const spacing = {
   default: "20px",
   xxs: "2px",
@@ -65,9 +70,55 @@ export const spacing = {
   xl: "80px",
 }
 
+// Setter Functions
 export const setFont = {
   main: "font-family: 'Merriweather', serif;",
   slanted: "font-family:'Caveat', cursive;",
+}
+
+export const setFlex = ({ x = "center", y = "center" } = {}) => {
+  return `display:flex;align-items:${y};justify-content:${x}`
+}
+
+export const setRem = (number = 16) => {
+  return `${number / 16}rem`
+}
+
+export const setLetterSpacing = (number = 2) => {
+  return `letter-spacing:${number}px`
+}
+
+export const setBorder = ({
+  width = "2px",
+  style = "solid",
+  color = "black",
+} = {}) => {
+  return `border:${width} ${style} ${color}`
+}
+
+// Media
+const sizes = {
+  large: 1200,
+  desktop: 992,
+  tablet: 768,
+  phone: 576,
+}
+
+export const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (min-width: ${sizes[label] / 16}em) {
+      ${css(...args)}
+    }
+  `
+  return acc
+}, {})
+
+export const setTransition = ({
+  property = "all",
+  time = "0.3s",
+  timing = "ease-in-out",
+} = {}) => {
+  return `transition:${property} ${time} ${timing}`
 }
 
 export const transDefault = "transition:all 0.5s ease-in-out"
@@ -96,17 +147,20 @@ export const transition = ({
   return `transition: ${property} ${time} ${type}`
 }
 
-export const border = ({
-  width = "0.15rem",
-  type = "solid",
-  color = "white",
-}) => {
-  return `border:${width} ${type} ${color}`
-}
+// TODO - remove border
+// export const border = ({
+//   width = "0.15rem",
+//   type = "solid",
+//   color = "white",
+// }) => {
+//   return `border:${width} ${type} ${color}`
+// }
 
-export const letterSpacing = ({ spacing = "0.1rem" }) => {
-  return `letter-spacing:${spacing}`
-}
+// TODO - remove letterspacing
+// export const letterSpacing = ({ spacing = "0.1rem" }) => {
+//   return `letter-spacing:${spacing}`
+// }
 
+// TODO - remove media query
 export const createMediaQuery = breakpoint =>
   `@media (min-width: ${breakpoint})`

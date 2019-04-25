@@ -19,7 +19,7 @@ body{
 }
 a {
     text-decoration: none;
-    color: ${colors.neutralDarkest}
+    color: ${colors.primaryBase}
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
@@ -58,6 +58,9 @@ p, div {
  font-size: 1rem;
  line-height:1.75;
  margin:0 0 1.5rem 0;
+}
+ul {
+    padding: 1rem 0 0 2rem;
 }
 `
 

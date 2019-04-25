@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import { styles } from "."
+import { styles } from "../utils"
+import { setBorder } from "../utils/styles"
 
 const BannerButton = styled.button`
   display: block;
@@ -10,7 +11,7 @@ const BannerButton = styled.button`
   font-size: 1.5rem;
   letter-spacing: 0.5rem;
   font-weight: 700;
-  ${styles.border({ color: `${styles.colors.white}` })};
+  ${setBorder({ color: `${styles.colors.white}` })};
   margin-top: 1rem;
   ${styles.transition({})};
   &:hover {
@@ -22,7 +23,7 @@ const BannerButton = styled.button`
 
 const SectionButton = styled(BannerButton)`
   color: ${styles.colors.black};
-  ${styles.border({ color: `${styles.colors.black}` })};
+  ${setBorder({ color: `${styles.colors.black}` })};
   &:hover {
     background: ${styles.colors.black};
     color: ${styles.colors.primaryBase};
