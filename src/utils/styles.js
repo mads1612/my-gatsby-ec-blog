@@ -79,10 +79,11 @@ export const setBorder = ({
 
 // Media
 const sizes = {
-  large: 1200,
+  giant: 1170,
   desktop: 992,
   tablet: 768,
-  phone: 576,
+  phablet: 572,
+  phone: 376,
 }
 
 export const media = Object.keys(sizes).reduce((acc, label) => {

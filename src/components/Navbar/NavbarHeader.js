@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { MenuAltRight } from "styled-icons/boxicons-regular/MenuAltRight"
 
-import { setColor } from "../../utils/styles"
+import { setRem, setColor } from "../../utils/styles"
 
 export default function NavbarHeader({ handleNavbar }) {
   //   const siteTitle = useSiteMetadata()
@@ -41,10 +41,10 @@ const HeaderWrapper = styled.div`
     color: ${setColor.primaryBase};
     cursor: pointer;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 760px) {
     .toggle-icon {
       display: none;
     }
-    padding: 0.4rem 1rem;
+    padding: 0.4rem ${setRem(1)};
   }
 `
