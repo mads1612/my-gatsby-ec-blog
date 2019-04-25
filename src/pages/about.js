@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import { graphql } from "gatsby"
 import Seo from "../components/Seo"
-import PostLayout from "../components/Layouts/PostLayout"
+import AboutLayout from "../components/Layouts/AboutLayout"
 
 // TODO - design author box
 
@@ -11,7 +11,7 @@ const About = ({ data }) => {
 
   return (
     <Fragment>
-      <PostLayout>
+      <AboutLayout>
         <Seo title="About" keywords={["About", "Chuck Smith"]} />
         <h1>About</h1>
         <p>
@@ -106,7 +106,7 @@ const About = ({ data }) => {
           time to look at yours, I am sure you will see a journey which is
           diverse and unique.
         </p>
-      </PostLayout>
+      </AboutLayout>
     </Fragment>
   )
 }

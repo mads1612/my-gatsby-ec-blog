@@ -14,7 +14,7 @@ const Body = styled.div`
   overflow: hidden;
 `
 
-const PostLayout = ({ children }) => (
+const AboutLayout = ({ children }) => (
   <div>
     <Body>
       <Navbar />
@@ -34,8 +34,8 @@ const PostLayout = ({ children }) => (
   </div>
 )
 
-PostLayout.propTypes = {
+AboutLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default PostLayout
+export default AboutLayout

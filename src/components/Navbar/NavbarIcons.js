@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-// import { FaInstagram } from "react-icons/fa"
 import { FacebookSquare } from "styled-icons/fa-brands/FacebookSquare"
 import { Twitter } from "styled-icons/fa-brands/Twitter"
 import { Instagram } from "styled-icons/fa-brands/Instagram"

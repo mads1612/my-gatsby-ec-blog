@@ -13,8 +13,9 @@ export default function NavbarHeader({ handleNavbar }) {
         to="/"
         style={{
           color: `${setColor.neutralDarkest}`,
-          fontSize: `1.5rem`,
+          fontSize: `${setRem(25)}`,
           fontWeight: 700,
+          marginLeft: `${setRem(20)}`,
         }}
       >
         Eclectic Saddlebag
@@ -31,7 +32,7 @@ export default function NavbarHeader({ handleNavbar }) {
 }
 
 const HeaderWrapper = styled.div`
-  padding: 0.6rem 1rem;
+  padding: 0.6rem ${setRem(20)};
   display: flex;
   align-items: center;
   margin-bottom: 0;
