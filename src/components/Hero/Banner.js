@@ -1,37 +1,81 @@
 import React from "react"
-import styled from "styled-components"
-import { setColor, setFont, setLetterSpacing } from "../../utils/styles"
+import styled, { css, keyframes } from "styled-components"
+import {
+  setColor,
+  setRem,
+  setLetterSpacing,
+  setBorder,
+  media,
+} from "../../utils/styles"
 
-export const Banner = ({ title, subtitle, children }) => {
+const fadeIn = (start, point, end) => {
+  const animation = keyframes`
+0%{
+ opacity:0;
+ transform:translateY(${start})
+}
+50%{
+ opacity:0.5;
+ transform:translateY(${point})
+}
+100%{
+ opacity:1;
+ transform:translateY(${end})
+}
+
+`
+  return css`
+    animation: ${animation} 3s ease-in-out;
+  `
+}
+const Banner = ({ className, title, text, children, greeting }) => {
   return (
-    <BannerWrapper>
-      <h1>{title}</h1>
-      <h3>{subtitle}</h3>
-      {children}
-    </BannerWrapper>
+    <div className={className}>
+      <h1>
+        {greeting} <span>{title}</span>{" "}
+      </h1>
+      <div className="info">
+        <p>{text}</p>
+        {children}
+      </div>
+    </div>
   )
 }
-
-const BannerWrapper = styled.div`
-  margin-bottom: 3rem;
+const BannerWrapper = styled(Banner)`
+  background: rgba(0, 0, 0, 0.7);
+  ${setBorder({ width: "6px", color: setColor.neutralLight })};
   text-align: center;
+  padding: ${setRem(60)} ${setRem(32)};
+  ${setLetterSpacing(3)}
+  color: ${setColor.white};
   h1 {
-    color: ${setColor.neutralLightest};
-    font-size: 3rem;
-    text-transform: uppercase;
-    ${setLetterSpacing(14)};
-    @media (max-width: 767px) {
-      font-size: 2rem;
+    text-transform: capitalize;
+    font-size: ${setRem(48)};
+    color: ${setColor.primaryBase};
+    span {
+      color: ${setColor.white};
     }
   }
-  h3 {
-    color: ${setColor.neutralLightest};
-    ${setFont.slanted};
-    ${setLetterSpacing()};
-    font-size: 1.5rem;
-    text-transform: capitalize;
+  p {
+    width: 85%;
+    margin: 0 auto;
+  }
+  ${media.tablet` width: 70vw;
+    ${setBorder({ width: "6px", color: setColor.neutralLight })};
+    p {
+      width: 75%;
+    }`}
+
+
+  h1 {
+   ${fadeIn("100%", "-10%", "0")}
+    /* animation */
+  }
+  .info {
+      ${fadeIn("-100%", "10%", "0")}
+      color: ${setColor.primaryBase};
+
+    /* animation */
   }
 `
-Banner.defaultProps = {
-  title: "default title",
-}
+export default BannerWrapper
