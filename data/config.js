@@ -9,6 +9,7 @@ module.exports = {
   /* author */
   authorName: "chuck smith",
   authorTwitterAccount: "polishedwp",
+  authorDescription: "hello", // For author box
 
   /* info */
   headerTitle: "Eclectic Saddlebag",
@@ -27,11 +28,12 @@ module.exports = {
   // Replace your email address with md5-code.
   // Example https://www.gravatar.com/avatar/g.strainovic@gmail.com ->
   // gravatarImgMd5: "https://www.gravatar.com/avatar/1db853e4df386e8f699e4b35505dd8c6",
-  gravatarImgMd5: "https://www.gravatar.com/avatar/7270a7707fc7e75fd1a8373a79592f22",
+  gravatarImgMd5:
+    "https://www.gravatar.com/avatar/7270a7707fc7e75fd1a8373a79592f22",
 
   // social
   authorSocialLinks: [
     { name: "github", url: "https://github.com/polishedwp" },
     { name: "twitter", url: "https://twitter.com/polishedwp" },
-  ]
-};
+  ],
+}

@@ -6,6 +6,7 @@ module.exports = {
     description: config.siteDescription,
     siteUrl: config.siteUrl,
     author: config.authorName,
+    bio: config.authorDescription,
   },
   plugins: [
     {

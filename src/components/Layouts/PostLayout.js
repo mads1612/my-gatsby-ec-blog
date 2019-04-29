@@ -20,12 +20,14 @@ const PostLayout = ({ children }) => (
     <Body>
       <Navbar />
       <Image />
+
       <GlobalStyles />
       <PostWrapper
         style={{
           margin: `0 auto`,
           padding: `0px 1.0875rem 1.45rem`,
           paddingTop: 0,
+          maxWidth: 800,
         }}
       >
         {children}

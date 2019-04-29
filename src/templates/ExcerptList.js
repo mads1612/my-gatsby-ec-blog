@@ -20,8 +20,8 @@ const ExcerptList = ({ data, ...props }) => {
 
   return (
     <Fragment>
-      <Seo title={title} keywords={["Kyle Shevlin"]} />
-      <PostLayout>
+      <Seo title={title} keywords={["Chuck Smith"]} />
+      <PostLayout style={{}}>
         <div>
           {posts.map(post => (
             <ExcerptedPost key={post.frontmatter.slug} post={post} />

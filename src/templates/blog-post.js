@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import PostLayout from "../components/Layouts/PostLayout"
 import SEO from "../components/Seo"
+import Author from "../components/Posts/Author"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -37,6 +38,8 @@ class BlogPostTemplate extends React.Component {
           />
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+        <Author />
 
         <ul
           style={{
