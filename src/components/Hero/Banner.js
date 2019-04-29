@@ -45,7 +45,7 @@ const BannerWrapper = styled(Banner)`
   background: rgba(0, 0, 0, 0.7);
   ${setBorder({ width: "6px", color: setColor.neutralLight })};
   text-align: center;
-  padding: ${setRem(60)} ${setRem(32)};
+  padding: ${setRem(40)} ${setRem(32)};
   ${setLetterSpacing(3)}
   color: ${setColor.white};
   h1 {
@@ -73,7 +73,8 @@ const BannerWrapper = styled(Banner)`
   }
   .info {
       ${fadeIn("-100%", "10%", "0")}
-      color: ${setColor.primaryBase};
+      color: ${setColor.neutralLight};
+      font-size: ${setRem(18)};
 
     /* animation */
   }

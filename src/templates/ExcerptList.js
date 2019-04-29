@@ -10,8 +10,7 @@ import Seo from "../components/Seo"
 import PostLayout from "../components/Layouts/PostLayout"
 import useSiteMetadata from "../components/hooks/useSiteMetadata"
 
-// import { Title } from "../components/SectionInfo/Title"
-// import Container from "../components/Container"
+import { Title } from "../components/SectionInfo/Title"
 
 const ExcerptList = ({ data, ...props }) => {
   const { index, totalPages } = props.pageContext
@@ -22,6 +21,7 @@ const ExcerptList = ({ data, ...props }) => {
     <Fragment>
       <Seo title={title} keywords={["Chuck Smith"]} />
       <PostLayout style={{}}>
+        <Title title={"Latest Posts"} message={""} />
         <div>
           {posts.map(post => (
             <ExcerptedPost key={post.frontmatter.slug} post={post} />

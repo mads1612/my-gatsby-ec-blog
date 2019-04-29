@@ -20,7 +20,7 @@ const About = ({ data }) => {
               display: "block",
               borderRadius: "5% !important",
               padding: "1rem",
-              maxWidth: "800px",
+              maxWidth: "90%",
             }}
             src={imgSrcPassion}
             alt="Passion led us here."

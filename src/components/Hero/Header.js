@@ -10,7 +10,7 @@ const Header = () => {
       <Banner
         greeting="welcome to"
         title="Eclectic Saddlebag"
-        text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi provident eos sapiente deleniti in quisquam."
+        text="The home for my random thoughts, interest, and ideas."
       />
     </Hero>
   )
