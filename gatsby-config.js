@@ -2,6 +2,10 @@ const config = require("./data/config")
 
 module.exports = {
   siteMetadata: {
+    navbarLinks: [
+      { to: "/blog", name: "Blog" },
+      { to: "/about", name: "About" },
+    ],
     title: config.siteTitle,
     description: config.siteDescription,
     siteUrl: config.siteUrl,

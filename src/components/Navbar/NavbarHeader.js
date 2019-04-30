@@ -8,7 +8,7 @@ import { setRem, setColor } from "../../utils/styles"
 export default function NavbarHeader({ handleNavbar }) {
   //   const siteTitle = useSiteMetadata()
   return (
-    <HeaderWrapper>
+    <HeaderWrapper className="navbar-fixed-top">
       <Link
         to="/"
         style={{
@@ -32,6 +32,11 @@ export default function NavbarHeader({ handleNavbar }) {
 }
 
 const HeaderWrapper = styled.div`
+  .navbar-fixed-top {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
   padding: 0.6rem ${setRem(20)};
   display: flex;
   align-items: center;
