@@ -20,7 +20,7 @@ const About = ({ data }) => {
             <img
               css={{
                 display: "block",
-                borderRadius: "5% !important",
+                borderRadius: "5%",
                 padding: "1rem",
                 maxWidth: "90%",
               }}
@@ -61,7 +61,7 @@ const About = ({ data }) => {
               display: "block",
               borderRadius: "5%",
               padding: "1rem",
-              maxWidth: "800px",
+              maxWidth: "90%",
             }}
             src={imgSrcBuilding}
             alt="Aerial view of buildings"
