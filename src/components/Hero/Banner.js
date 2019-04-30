@@ -52,6 +52,7 @@ const BannerWrapper = styled(Banner)`
     text-transform: capitalize;
     font-size: ${setRem(48)};
     color: ${setColor.primaryBase};
+    ${media.tablet`h1 {font-size: ${setRem(24)}}`};
     span {
       color: ${setColor.white};
     }
@@ -72,7 +73,6 @@ const BannerWrapper = styled(Banner)`
 
   h1 {
    ${fadeIn("100%", "-10%", "0")}
-    /* animation */
   }
   .info {
       ${fadeIn("-100%", "10%", "0")}
