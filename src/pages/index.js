@@ -1,17 +1,19 @@
 // ec-blog -- /src/components/pages/index.js.
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
-import { breakpoints, setRem } from "../utils/styles"
+import { breakpoints, setRem, setColor } from "../utils/styles"
 import Seo from "../components/Seo"
 import Layout from "../components/Layouts/Layout"
 import { HomeHeader } from "../components/Hero"
-import QuickInfo from "../components/SectionInfo/QuickInfo"
 
 import { GlobalStyles } from "../utils/GlobalStyles"
-import { Title } from "../components/SectionInfo/Title"
+import { Section } from "../components/Section/Section"
+import { Title } from "../components/Section/Title"
+import { QuickInfo } from "../components/Section/QuickInfo"
+import { SectionButton } from "../utils"
 import Container from "../components/Container"
 import PostHeader from "../components/Posts/PostHeader"
 import PostDate from "../components/Posts/PostDate"
@@ -50,12 +52,25 @@ class BlogIndex extends React.Component {
         <Layout location={this.props.location} title={siteTitle}>
           <Seo title={siteTitle} keywords={["About", "Chuck Smith"]} />
           <HomeHeader fluid={data.hero.edges[0].node.fluid} />
-          <QuickInfo />
+          <Section color={setColor.neutralLightest}>
+            <Title message={"Life is random"} title={"My Random Thoughts"} />
+            <QuickInfo
+              message={
+                "Life is a journey, and along the way, we all collect thoughts, experiences, and learn.The word < em > eclectic</em > best describes this collection, a collection which can be described as random.Here on this site, you can learn a little about me, engage of the random thoughts I have, and experience a little of what I have."
+              }
+            />
+            <Link to="/about" style={{ textDecoration: `none` }}>
+              <SectionButton style={{ margin: `2rem auto` }}>
+                About
+              </SectionButton>
+            </Link>
+          </Section>
           <Title
             style={{ paddingTop: "1rem" }}
             message={""}
             title={"Latest Articles"}
           />
+
           <Container>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
