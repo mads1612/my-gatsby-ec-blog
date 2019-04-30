@@ -10,7 +10,7 @@ import Seo from "../components/Seo"
 import PostLayout from "../components/Layouts/PostLayout"
 import useSiteMetadata from "../components/hooks/useSiteMetadata"
 
-import { Title } from "../components/SectionInfo/Title"
+import { Title } from "../components/Section/Title"
 
 const ExcerptList = ({ data, ...props }) => {
   const { index, totalPages } = props.pageContext

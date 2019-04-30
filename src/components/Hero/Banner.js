@@ -64,6 +64,9 @@ const BannerWrapper = styled(Banner)`
     ${setBorder({ width: "6px", color: setColor.neutralLight })};
     p {
       width: 75%;
+    }
+    h1{
+        font-size: ${setRem(24)}
     }`}
 
 
@@ -75,8 +78,7 @@ const BannerWrapper = styled(Banner)`
       ${fadeIn("-100%", "10%", "0")}
       color: ${setColor.neutralLight};
       font-size: ${setRem(18)};
-
-    /* animation */
+      ${media.tablet`display: none`}
   }
 `
 export default BannerWrapper

@@ -1,5 +1,5 @@
 import * as styles from "./styles"
-import { Section } from "../components/SectionInfo/Section"
+import { Section } from "../components/Section/Section"
 import { GlobalStyles } from "./GlobalStyles"
 import { BannerButton, SectionButton } from "./Buttons"
 import { formatStrForPath } from "./formatStr"
