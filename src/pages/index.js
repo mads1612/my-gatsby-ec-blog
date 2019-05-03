@@ -142,7 +142,7 @@ export const pageQuery = graphql`
       edges {
         node {
           fluid(maxWidth: 1240) {
-            ...GatsbyImageSharpFluid_withWebp_noBase64
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
