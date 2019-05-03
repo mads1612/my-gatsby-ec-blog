@@ -144,7 +144,7 @@ export const pageQuery = graphql`
           fluid(
             duotone: { highlight: "#000000", shadow: "#222222", opacity: 20 }
           ) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

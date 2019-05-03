@@ -6,7 +6,7 @@ import { setColor, setFont } from "../../utils/styles"
 
 const linkStyles = {
   display: "inline-block",
-  backgroundColor: `${setColor.primaryBase}`,
+  backgroundColor: `${setColor.primaryDark}`,
   color: `${setColor.white}`,
   height: "24px",
   fontFamily: `${setFont.main}`,
@@ -18,7 +18,7 @@ const linkStyles = {
   transition: "background-color 0.3s ease",
 
   "&:hover": {
-    backgroundColor: lighten(0.1, `${setColor.primaryBase}`),
+    backgroundColor: lighten(0.1, `${setColor.primaryDark}`),
     color: `${setColor.white}`,
   },
 }

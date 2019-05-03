@@ -53,14 +53,14 @@ const PostDate = ({ date, author, category }) => (
   <div>
     <MetaBox>
       <DateBox>
-        <Calendar size="15" style={{ color: `${setColor.primaryBase}` }} />{" "}
+        <Calendar size="15" style={{ color: `${setColor.primaryDark}` }} />{" "}
         {date}
       </DateBox>
       <AuthorBox>
-        <User size="15" style={{ color: `${setColor.primaryBase}` }} /> {author}
+        <User size="15" style={{ color: `${setColor.primaryDark}` }} /> {author}
       </AuthorBox>
       <CatBox>
-        <PurchaseTag size="15" style={{ color: `${setColor.primaryBase}` }} />{" "}
+        <PurchaseTag size="15" style={{ color: `${setColor.primaryDark}` }} />{" "}
         {""}
         <Link to={`/category/${category.split(" ").join("-")}`}>
           {category}

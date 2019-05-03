@@ -13,16 +13,19 @@ export default class Footer extends Component {
         id: 1,
         icon: <FacebookSquare size="24" className="icon facebook-icon" />,
         path: `https://www.facebook.com`,
+        name: `Facebook profile page`,
       },
       {
         id: 2,
         icon: <Twitter size="24" className="icon twitter-icon" />,
         path: `https://www.facebook.com`,
+        name: `Twitter profile page`,
       },
       {
         id: 3,
         icon: <Instagram size="24" className="icon instagram-icon" />,
         path: `https://www.facebook.com`,
+        name: `Instagram profile page`,
       },
     ],
   }
@@ -37,6 +40,7 @@ export default class Footer extends Component {
               key={item.id}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={item.name}
             >
               {item.icon}
             </a>
@@ -77,10 +81,13 @@ const FooterWrapper = styled.footer`
     font-size: 0.8rem;
     text-shadow: none;
   }
+  a {
+    color: ${setColor.primaryLightest};
+  }
   .title {
     text-align: center;
     width: 20rem;
-    color: ${setColor.primaryBase};
+    color: ${setColor.primaryLightest};
     font-style: oblique;
     padding: 0.3rem 1rem;
     margin: 0 auto 1rem auto;

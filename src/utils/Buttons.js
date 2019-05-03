@@ -25,7 +25,7 @@ const SectionButton = styled(BannerButton)`
   ${setBorder({ color: `${setColor.black}` })};
   &:hover {
     background: ${setColor.black};
-    color: ${setColor.primaryBase};
+    color: ${setColor.primaryDark};
     cursor: pointer;
   }
 `

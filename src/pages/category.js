@@ -10,7 +10,7 @@ import { setColor, setRem } from "../utils/styles"
 // import Seo from "../components/Seo"
 
 const StyledTag = styled(PurchaseTag)`
-  color: ${setColor.primaryBase};
+  color: ${setColor.primaryDark};
   padding-right: ${setRem(10)};
 `
 

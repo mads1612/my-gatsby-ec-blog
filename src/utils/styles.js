@@ -17,11 +17,11 @@ export const setColor = {
   neutralDarkest: "#102a43",
 
   // Primary's - actions, navigation, icons, borders, or emphasize text.
-  primaryLightest: "hsl(205, 84%, 74%)",
+  primaryLightest: "hsl(205, 83%, 75%)",
   primaryLighter: "hsl(205, 74%, 65%)",
   primaryLight: "hsl(205, 65%, 55%)",
   primaryBase: "hsl(205, 76%, 39%)",
-  primaryDark: "hsl(205, 82%, 33%)",
+  primaryDark: "hsl(205, 80%, 31%)",
   primaryDarker: "hsl(205, 87%, 29%)",
   primaryDarkest: "hsl(205, 100%, 21%)",
 

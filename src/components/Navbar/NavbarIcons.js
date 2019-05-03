@@ -12,28 +12,37 @@ export default class NavbarIcons extends Component {
         id: 1,
         icon: <FacebookSquare className="icon facebook-icon" />,
         path: `https://www.facebook.com/RevChuckSmith`,
+        name: `Facebook profile page`,
       },
       {
         id: 2,
         icon: <Twitter className="icon twitter-icon" />,
         path: `https://www.twitter.com/polishedwp`,
+        name: `Twitter profile page`,
       },
       {
         id: 3,
         icon: <Instagram className="icon instagram-icon" />,
         path: `https://www.instagram.com/webrev`,
+        name: `Instagram profile page`,
       },
     ],
   }
   render() {
     return (
-      <IconWrapper style={{ marginBottom: 0, marginTop: -10 }}>
+      <IconWrapper
+        style={{
+          marginBottom: 0,
+          marginTop: -10,
+        }}
+      >
         {this.state.icons.map(item => (
           <a
             href={item.path}
             key={item.id}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={item.name}
           >
             {item.icon}
           </a>

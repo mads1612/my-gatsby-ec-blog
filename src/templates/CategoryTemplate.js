@@ -28,7 +28,7 @@ const ContentWrapper = styled.div`
 `
 
 const StyledTag = styled(PurchaseTag)`
-  color: ${setColor.primaryBase};
+  color: ${setColor.primaryDark};
   padding-right: ${setRem(10)};
 `
 

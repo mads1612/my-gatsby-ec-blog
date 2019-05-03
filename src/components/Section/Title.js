@@ -22,7 +22,7 @@ const TitleWrapper = styled.div`
     ${setFont.slanted};
     ${setLetterSpacing(4)};
     font-size: 2rem;
-    color: ${setColor.primaryLight};
+    color: ${setColor.primaryDark};
   }
   h1 {
     ${setLetterSpacing(4)};
@@ -33,7 +33,7 @@ const TitleWrapper = styled.div`
   .underline {
     width: 10rem;
     height: 0.2rem;
-    background: ${setColor.primaryLight};
+    background: ${setColor.primaryDark};
     margin: 0.5rem auto;
   }
 `

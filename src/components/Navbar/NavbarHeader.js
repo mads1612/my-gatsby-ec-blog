@@ -44,7 +44,7 @@ const HeaderWrapper = styled.div`
   justify-content: space-between;
   .toggle-icon {
     font-size: 1.75rem;
-    color: ${setColor.primaryBase};
+    color: ${setColor.primaryDark};
     cursor: pointer;
   }
   @media (min-width: 760px) {

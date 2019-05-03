@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { setColor, transDefault, setTransition } from "../../utils/styles"
 
+// TODO Add menu icons
 export default class NavbarLinks extends Component {
   state = {
     links: [
@@ -45,7 +46,7 @@ const LinkWrapper = styled.ul`
     ${transDefault};
     &:hover {
       background: ${setColor.neutralLightest};
-      color: ${setColor.primaryBase};
+      color: ${setColor.primaryDark};
       padding: 0.5rem 1rem 0rem 1.3rem;
     }
   }
