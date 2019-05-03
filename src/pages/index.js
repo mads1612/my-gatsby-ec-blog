@@ -142,6 +142,7 @@ export const pageQuery = graphql`
       edges {
         node {
           fluid(
+            maxWidth: 1240
             duotone: { highlight: "#000000", shadow: "#222222", opacity: 20 }
           ) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
