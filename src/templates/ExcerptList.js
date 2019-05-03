@@ -24,7 +24,7 @@ const ExcerptList = ({ data, ...props }) => {
         <Title title={"Latest Posts"} message={""} />
         <div>
           {posts.map(post => (
-            <ExcerptedPost key={post.node.slug} post={post} />
+            <ExcerptedPost key={post.node.fields.slug} post={post} />
           ))}
         </div>
       </PostLayout>
