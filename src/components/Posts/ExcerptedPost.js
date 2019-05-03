@@ -12,7 +12,7 @@ const ExcerptedPost = ({ post }) => {
     excerpt,
     slug,
     timeToRead,
-    frontmatter: { categories, date, tags, title, author },
+    frontmatter: { categories, date, title, author },
   } = post
 
   return (

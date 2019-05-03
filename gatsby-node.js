@@ -35,7 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const postTemplate = path.resolve(`./src/templates/blog-post.js`)
-    const ExcerptList = path.resolve(`./src/templates/ExcerptList.js`)
+    // const ExcerptList = path.resolve(`./src/templates/ExcerptList.js`)
     const CategoriesTemplate = path.resolve("src/templates/CategoryTemplate.js")
 
     // Do not create draft post files in production.
@@ -154,23 +154,23 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         // Create ExcerptList (blog) page
-        const postsPerPage = 5
-        const numPages = Math.ceil(posts.length / postsPerPage)
+        // const postsPerPage = 5
+        // const numPages = Math.ceil(posts.length / postsPerPage)
 
-        Array.from({
-          length: numPages,
-        }).forEach((_, i) => {
-          createPage({
-            path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-            component: ExcerptList,
-            context: {
-              limit: postsPerPage,
-              skip: i * postsPerPage,
-              numPages,
-              currentPage: i + 1,
-            },
-          })
-        })
+        // Array.from({
+        //   length: numPages,
+        // }).forEach((_, i) => {
+        //   createPage({
+        //     path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+        //     component: ExcerptList,
+        //     context: {
+        //       limit: postsPerPage,
+        //       skip: i * postsPerPage,
+        //       numPages,
+        //       currentPage: i + 1,
+        //     },
+        //   })
+        // })
       })
     )
   })
