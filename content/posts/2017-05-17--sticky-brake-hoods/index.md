@@ -3,7 +3,7 @@ title: "Sticky Brake Hoods"
 date: 2017-05-17
 author: Chuck Smith
 tags: ["exercise", "repairs"]
-category: "excercise"
+category: "exercise"
 draft: false
 image: "./brakehoods.jpg"
 ---

@@ -96,7 +96,7 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        // Reduce categories and tags
+        // Reduce categories
         const { categories } = posts.reduce(
           (acc, post) => {
             const { categories } = post.node.frontmatter
@@ -111,19 +111,38 @@ exports.createPages = ({ graphql, actions }) => {
               })
             }
 
-            // if (tags) {
-            //   tags.forEach(tag => {
-            //     acc.tags.add(tag)
-            //   })
-            // }
-
             return acc
           },
           {
             categories: new Set(),
-            // tags: new Set(),
           }
         )
+
+        // Create category list
+        const categorySet = new Set()
+        posts.forEach(edge => {
+          const {
+            node: {
+              frontmatter: { category },
+            },
+          } = edge
+
+          if (category && category !== null) {
+            categorySet.add(category)
+          }
+        })
+
+        // Create category pages
+        const categoryList = Array.from(categorySet)
+        categoryList.forEach(category => {
+          createPage({
+            path: `/category/${_.kebabCase(category)}/`,
+            component: CategoriesTemplate,
+            context: {
+              category,
+            },
+          })
+        })
 
         // Create All Categories page
         createPage({
@@ -133,26 +152,6 @@ exports.createPages = ({ graphql, actions }) => {
             categories: Array.from(categories),
           },
         })
-
-        // Create All Tags page
-        createPage({
-          path: "tags",
-          component: CategoriesTemplate,
-          context: {
-            tags: Array.from(tags),
-          },
-        })
-
-        // Create individual Category pages
-        // categories.forEach(category => {
-        //   createPage({
-        //     path: `categories/${formatStrForPath(category)}`,
-        //     component: categoriesTemplate,
-        //     context: {
-        //       category,
-        //     },
-        //   })
-        // })
 
         // Create ExcerptList (blog) page
         const postsPerPage = 5

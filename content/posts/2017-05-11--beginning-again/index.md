@@ -3,7 +3,7 @@ title: "Beginning Again"
 date: 2017-05-11
 author: Chuck Smith
 tags: ["cycling", "exercise"]
-category: "excercise"
+category: "exercise"
 draft: false
 image: "./sirrus-img.png"
 ---

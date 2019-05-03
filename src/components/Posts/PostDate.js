@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { breakpoints, media, setColor, setRem } from "../../utils/styles"
 import styled from "styled-components"
 
@@ -61,7 +62,9 @@ const PostDate = ({ date, author, category }) => (
       <CatBox>
         <PurchaseTag size="15" style={{ color: `${setColor.primaryBase}` }} />{" "}
         {""}
-        {category}
+        <Link to={`/category/${category.split(" ").join("-")}`}>
+          {category}
+        </Link>
       </CatBox>
     </MetaBox>
   </div>
