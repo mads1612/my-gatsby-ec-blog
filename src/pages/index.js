@@ -56,7 +56,7 @@ class BlogIndex extends React.Component {
             <Title message={"Life is random"} title={"My Random Thoughts"} />
             <QuickInfo
               message={
-                "Life is a journey, and along the way, we all collect thoughts, experiences, and learn.The word < em > eclectic</em > best describes this collection, a collection which can be described as random.Here on this site, you can learn a little about me, engage of the random thoughts I have, and experience a little of what I have."
+                "Life is a journey, and along the way, we all collect thoughts, experiences, and learn.The word <em> eclectic</em> best describes this collection, a collection which can be described as random.Here on this site, you can learn a little about me, engage of the random thoughts I have, and experience a little of what I have."
               }
             />
             <Link to="/about" style={{ textDecoration: `none` }}>
@@ -81,7 +81,7 @@ class BlogIndex extends React.Component {
                   <PostDate
                     date={node.frontmatter.date}
                     author={node.frontmatter.author}
-                    readTime={node.timeToRead}
+                    category={node.frontmatter.category}
                   />
                   <PostBox>
                     <PostImage>
@@ -117,7 +117,6 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          timeToRead
           fields {
             slug
           }
@@ -125,7 +124,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             author
-            tags
+            category
             image {
               childImageSharp {
                 fluid(maxWidth: 630) {

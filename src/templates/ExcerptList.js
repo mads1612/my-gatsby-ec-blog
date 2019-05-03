@@ -24,7 +24,7 @@ const ExcerptList = ({ data, ...props }) => {
         <Title title={"Latest Posts"} message={""} />
         <div>
           {posts.map(post => (
-            <ExcerptedPost key={post.frontmatter.slug} post={post} />
+            <ExcerptedPost key={post.node.slug} post={post} />
           ))}
         </div>
       </PostLayout>
@@ -37,7 +37,7 @@ export default ExcerptList
 
 export const query = graphql`
   query ExcerptListQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { order: DESC, fields: [fields___prefix] }) {
       edges {
         node {
           id
@@ -45,11 +45,11 @@ export const query = graphql`
           timeToRead
           fields {
             slug
+            prefix
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            slug
             author
           }
         }

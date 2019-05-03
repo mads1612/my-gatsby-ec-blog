@@ -49,7 +49,7 @@ const LinkWrapper = styled.ul`
       padding: 0.5rem 1rem 0rem 1.3rem;
     }
   }
-  height: ${props => (props.open ? "180px" : "0px")};
+  height: ${props => (props.open ? "220px" : "0px")};
   overflow: hidden;
   ${setTransition({ time: "0.4s" })};
 
@@ -57,6 +57,7 @@ const LinkWrapper = styled.ul`
     height: auto;
     display: flex;
     margin: 0 auto;
+    margin-bottom: 0;
     .nav-link:hover {
       background: ${setColor.neutralLighter};
       padding: 0.5rem 1rem 0.5rem 1rem;

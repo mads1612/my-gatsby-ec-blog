@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import { Calendar } from "styled-icons/boxicons-regular/Calendar"
 import { User } from "styled-icons/fa-solid/User"
-import { Clock } from "styled-icons/fa-solid/Clock"
+import { PurchaseTag } from "styled-icons/boxicons-solid"
 
 const MetaBox = styled.div`
   display: flex;
@@ -38,16 +38,17 @@ const AuthorBox = styled.div`
   ${media.tablet`font-size: ${setRem(14)}, padding-right: ${setRem(2)}`};
 `
 
-const TimeBox = styled.div`
+const CatBox = styled.div`
   padding-right: ${setRem(20)};
   font-size: 0.8rem !important;
   margin-bottom: 0;
+  text-transform: capitalize;
   ${media.phone`display: none`};
   ${media.tablet`font-size: ${setRem(14)}, padding-right: ${setRem(2)}`};
   ${media.desktop`font-size: ${setRem(14)}, padding-right: ${setRem(2)}`};
 `
 
-const PostDate = ({ date, author, readTime }) => (
+const PostDate = ({ date, author, category }) => (
   <div>
     <MetaBox>
       <DateBox>
@@ -57,10 +58,11 @@ const PostDate = ({ date, author, readTime }) => (
       <AuthorBox>
         <User size="15" style={{ color: `${setColor.primaryBase}` }} /> {author}
       </AuthorBox>
-      <TimeBox>
-        <Clock size="15" style={{ color: `${setColor.primaryBase}` }} /> {""}
-        {readTime} min to read
-      </TimeBox>
+      <CatBox>
+        <PurchaseTag size="15" style={{ color: `${setColor.primaryBase}` }} />{" "}
+        {""}
+        {category}
+      </CatBox>
     </MetaBox>
   </div>
 )
