@@ -1,4 +1,3 @@
-// ec-blog -- /src/components/pages/index.js.
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -8,7 +7,6 @@ import { breakpoints, setRem, setColor } from "../utils/styles"
 import Seo from "../components/Seo"
 import Layout from "../components/Layouts/Layout"
 import { HomeHeader } from "../components/Hero"
-
 import { GlobalStyles } from "../utils/GlobalStyles"
 import { Section } from "../components/Section/Section"
 import { Title } from "../components/Section/Title"

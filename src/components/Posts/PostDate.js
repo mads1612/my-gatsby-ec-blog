@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { breakpoints, media, setColor, setRem } from "../../utils/styles"
+// import { formatStrForPath } from "../../utils/formatStr"
 import styled from "styled-components"
 
 import { Calendar } from "styled-icons/boxicons-regular/Calendar"

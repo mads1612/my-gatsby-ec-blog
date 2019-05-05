@@ -1,8 +1,9 @@
 module.exports = {
   siteTitle: "Eclectic Saddlebag", // <title>
   shortSiteTitle: "Eclectic Saddlebag", // <title> ending for posts and pages
-  siteDescription: "Eclectic Saddlebag - my random interest.",
-  siteUrl: "https://gatsby-starter-hero-blog.greglobinski.com",
+  siteDescription:
+    "My blog of my random, interest from coding, technology, exercise, and spirituality.",
+  siteUrl: "https://eclecticsaddlebag.com",
   siteImage: "preview.jpg",
   siteLanguage: "en",
 
