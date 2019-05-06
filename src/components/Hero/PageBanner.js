@@ -28,59 +28,41 @@ const fadeIn = (start, point, end) => {
     animation: ${animation} 3s ease-in-out;
   `
 }
-
-const Banner = ({ className, title, text, children, greeting }) => {
+const Banner = ({ className, title }) => {
   return (
     <div className={className}>
       <h1>
-        {greeting} <span>{title}</span>{" "}
+        <span>{title}</span>{" "}
       </h1>
-      <div className="info">
-        <p>{text}</p>
-        {children}
-      </div>
     </div>
   )
 }
 
-const BannerWrapper = styled(Banner)`
+const PageBannerWrapper = styled(Banner)`
   background: rgba(0, 0, 0, 0.7);
   ${setBorder({ width: "6px", color: setColor.neutralLight })};
   text-align: center;
-  padding: ${setRem(40)} ${setRem(32)};
+  padding: ${setRem(30)} ${setRem(30)};
   ${setLetterSpacing(3)}
   color: ${setColor.white};
   h1 {
     text-transform: capitalize;
     font-size: ${setRem(48)};
     color: ${setColor.primaryBase};
-    ${media.tablet`h1 {font-size: ${setRem(24)}}`};
+    ${media.tablet`h1 {font-size: ${setRem(24)};}`};
     span {
       color: ${setColor.white};
     }
   }
-  p {
-    width: 85%;
-    margin: 0 auto;
-  }
-  ${media.tablet` width: 70vw;
-    ${setBorder({ width: "6px", color: setColor.neutralLight })};
-    p {
-      width: 75%;
-    }
+  ${media.tablet`
+    ${setBorder({ width: "6px", color: setColor.neutralLight })}
+    padding: ${setRem(20)} ${setRem(20)};
     h1{
-        font-size: ${setRem(24)}
+        font-size: ${setRem(24)};
     }`}
-
 
   h1 {
    ${fadeIn("100%", "-10%", "0")}
   }
-  .info {
-      ${fadeIn("-100%", "10%", "0")}
-      color: ${setColor.neutralLight};
-      font-size: ${setRem(18)};
-      ${media.tablet`display: none`}
-  }
 `
-export default BannerWrapper
+export default PageBannerWrapper

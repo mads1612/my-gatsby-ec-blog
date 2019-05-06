@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import Navbar from "../Navbar/Navbar"
-// import Image from "../hooks/blogimage"
+import PageHeader from "../../components/Hero/PageHeader"
 import Footer from "../Footer"
 import { GlobalStyles } from "../../utils"
 
@@ -19,8 +19,7 @@ const PostLayout = ({ children }) => (
   <div>
     <Body>
       <Navbar />
-      {/* <Image /> */}
-
+      {/* <PageHeader /> */}
       <GlobalStyles />
       <PostWrapper
         style={{

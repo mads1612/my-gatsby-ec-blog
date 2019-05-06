@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import PostLayout from "../components/Layouts/PostLayout"
 import SEO from "../components/Seo"
 import Author from "../components/Posts/Author"
+import Meta from "../components/Posts/PostDate"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -24,19 +25,14 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.title}
         </h1>
-        <p
-          style={{
-            display: `block`,
-            marginBottom: `1rem`,
-            marginTop: `1rem`,
-          }}
-        >
-          <small
-            style={{
-              marginTop: `1rem`,
-            }}
+        <div style={{ marginTop: 0 }}>
+          <Meta
+            date={post.frontmatter.date}
+            author={post.frontmatter.author}
+            category={post.frontmatter.category}
           />
-        </p>
+        </div>
+
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <Author />
@@ -86,7 +82,9 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        author
         date(formatString: "MMMM DD, YYYY")
+        category
         image {
           childImageSharp {
             fluid(maxWidth: 630) {

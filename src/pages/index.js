@@ -48,7 +48,7 @@ class BlogIndex extends React.Component {
       <div>
         <GlobalStyles />
         <Layout location={this.props.location} title={siteTitle}>
-          <Seo title={siteTitle} keywords={["About", "Chuck Smith"]} />
+          <Seo title="Home" keywords={["About", "Chuck Smith"]} />
           <HomeHeader fluid={data.hero.edges[0].node.fluid} />
           <Section color={setColor.neutralLightest}>
             <Title message={"Life is random"} title={"My Random Thoughts"} />
