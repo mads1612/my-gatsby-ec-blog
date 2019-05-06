@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { GlobalStyles } from "../../utils"
 
-import Navbar from "../Navbar/Navbar"
+import Navbar from "../Navbar"
 import Footer from "../Footer"
 
 const Body = styled.div`

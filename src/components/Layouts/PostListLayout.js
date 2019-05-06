@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 // import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import Navbar from "../Navbar/Navbar"
+import Navbar from "../Navbar"
 import HomeHeader from "../Hero/Header"
 import Footer from "../Footer"
 import { GlobalStyles } from "../../utils"
