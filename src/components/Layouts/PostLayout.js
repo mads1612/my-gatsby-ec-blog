@@ -2,8 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import Navbar from "../Navbar/Navbar"
-import PageHeader from "../../components/Hero/PageHeader"
 import Footer from "../Footer"
 import { GlobalStyles } from "../../utils"
 
@@ -18,13 +16,11 @@ const Body = styled.div`
 const PostLayout = ({ children }) => (
   <div>
     <Body>
-      <Navbar />
-      {/* <PageHeader /> */}
       <GlobalStyles />
       <PostWrapper
         style={{
           margin: `0 auto`,
-          padding: `0px 1.0875rem 1.45rem`,
+          padding: `1rem 1.0875rem 1.45rem`,
           paddingTop: 0,
           maxWidth: 800,
         }}

@@ -35,7 +35,6 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const postTemplate = path.resolve(`./src/templates/blog-post.js`)
-    // const ExcerptList = path.resolve(`./src/templates/ExcerptList.js`)
     const CategoriesTemplate = path.resolve("src/templates/CategoryTemplate.js")
 
     // Do not create draft post files in production.
@@ -73,9 +72,27 @@ exports.createPages = ({ graphql, actions }) => {
     `
       ).then(result => {
         if (result.errors) {
-          console.log(result.errors)
           reject(result.errors)
         }
+
+        //   Create ExcerptList(blog) page
+        //   const postsPerPage = 5
+        //   const numPages = Math.ceil(posts.length / postsPerPage)
+
+        //   Array.from({
+        //       length: numPages,
+        //   }).forEach((_, i) => {
+        //       createPage({
+        //           path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+        //           component: ExcerptList,
+        //           context: {
+        //               limit: postsPerPage,
+        //               skip: i * postsPerPage,
+        //               numPages,
+        //               currentPage: i + 1,
+        //           },
+        //       })
+        //   })
 
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges
@@ -132,7 +149,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         })
 
-        // Create category pages
+        // Create individual Category pages
         const categoryList = Array.from(categorySet)
         categoryList.forEach(category => {
           createPage({
@@ -152,25 +169,6 @@ exports.createPages = ({ graphql, actions }) => {
             categories: Array.from(categories),
           },
         })
-
-        // Create ExcerptList (blog) page
-        // const postsPerPage = 5
-        // const numPages = Math.ceil(posts.length / postsPerPage)
-
-        // Array.from({
-        //   length: numPages,
-        // }).forEach((_, i) => {
-        //   createPage({
-        //     path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-        //     component: ExcerptList,
-        //     context: {
-        //       limit: postsPerPage,
-        //       skip: i * postsPerPage,
-        //       numPages,
-        //       currentPage: i + 1,
-        //     },
-        //   })
-        // })
       })
     )
   })
