@@ -1,60 +1,41 @@
-import React, { Component } from "react"
+import React from "react"
+
 import styled from "styled-components"
 import { setColor, setTransition } from "../utils/styles"
 
-import { FacebookSquare } from "styled-icons/fa-brands/FacebookSquare"
-import { Twitter } from "styled-icons/fa-brands/Twitter"
-import { Instagram } from "styled-icons/fa-brands/Instagram"
+import { ThemeConsumer } from "../context"
 
-export default class Footer extends Component {
-  state = {
-    icons: [
-      {
-        id: 1,
-        icon: <FacebookSquare size="24" className="icon facebook-icon" />,
-        path: `https://www.facebook.com`,
-        name: `Facebook profile page`,
-      },
-      {
-        id: 2,
-        icon: <Twitter size="24" className="icon twitter-icon" />,
-        path: `https://www.facebook.com`,
-        name: `Twitter profile page`,
-      },
-      {
-        id: 3,
-        icon: <Instagram size="24" className="icon instagram-icon" />,
-        path: `https://www.facebook.com`,
-        name: `Instagram profile page`,
-      },
-    ],
-  }
-  render() {
-    return (
-      <FooterWrapper>
-        <div className="title">Eclectic Saddlebag</div>
-        <div className="icons">
-          {this.state.icons.map(item => (
-            <a
-              href={item.path}
-              key={item.id}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={item.name}
-            >
-              {item.icon}
-            </a>
-          ))}
-        </div>
-        <p className="copyright">
-          Copyright &copy; {new Date().getFullYear()} Eclectic Saddlebag - Built
-          with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </p>
-      </FooterWrapper>
-    )
-  }
+export default function Footer() {
+  return (
+    <ThemeConsumer>
+      {value => {
+        return (
+          <FooterWrapper>
+            <div className="title">Eclectic Saddlebag</div>
+            <div className="icons">
+              {value.socialIcons.map(item => (
+                <a
+                  href={item.url}
+                  key={item.id}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.name}
+                >
+                  {item.icon}
+                </a>
+              ))}
+            </div>
+            <p className="copyright">
+              Copyright &copy; {new Date().getFullYear()} Eclectic Saddlebag -
+              Built with
+              {` `}
+              <a href="https://www.gatsbyjs.org">Gatsby</a>
+            </p>
+          </FooterWrapper>
+        )
+      }}
+    </ThemeConsumer>
+  )
 }
 
 const FooterWrapper = styled.footer`
@@ -67,12 +48,37 @@ const FooterWrapper = styled.footer`
     margin: 0 auto;
   }
   .icon {
+    margin: 20px 20px 0 0;
+    justify-content: space-between;
+    transition: ${setTransition({ time: "0.3s" })};
+  }
+  .icon:hover {
+    /* color: ${setColor.white}; */
+    cursor: pointer;
+  }
+  .facebook-icon {
     color: ${setColor.white};
-    font-size: 0.5rem;
-    ${setTransition({ time: "0.3s" })};
-    &:hover {
-      color: ${setColor.vividDarkest};
-    }
+    transition: ${setTransition({ time: "0.3s" })};
+  }
+  .facebook-icon:hover {
+    color: #3b5998;
+    cursor: pointer;
+  }
+  .twitter-icon {
+    color: ${setColor.white};
+    transition: ${setTransition({ time: "0.3s" })};
+  }
+  .twitter-icon:hover {
+    color: #1da1f2;
+    cursor: pointer;
+  }
+  .instagram-icon {
+    color: ${setColor.white};
+    transition: ${setTransition({ time: "0.3s" })};
+  }
+  .instagram-icon:hover {
+    color: #e95950;
+    cursor: pointer;
   }
   .copyright {
     color: ${setColor.white};

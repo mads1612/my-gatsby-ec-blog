@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { GlobalStyles } from "../../utils"
 
 import Navbar from "../Navbar"
+import Sidebar from "../Navbar/Sidebar"
 import Footer from "../Footer"
 
 const Body = styled.div`
@@ -20,6 +21,7 @@ const Layout = ({ children }) => (
     <div>
       <Body>
         <Navbar />
+        <Sidebar />
         {children}
       </Body>
       <Footer />
