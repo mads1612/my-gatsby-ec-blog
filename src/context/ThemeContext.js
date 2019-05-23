@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { linkData } from "./linkData"
 import { socialData } from "./socialData"
+
 const ThemeContext = React.createContext()
 
 class ThemeProvider extends Component {
@@ -27,6 +28,6 @@ class ThemeProvider extends Component {
   }
 }
 
-const ThemeConsumer = ThemeContext.Consumer
+export default ThemeContext
 
-export { ThemeProvider, ThemeConsumer }
+export { ThemeProvider }

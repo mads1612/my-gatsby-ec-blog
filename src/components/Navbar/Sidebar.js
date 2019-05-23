@@ -2,11 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import { setColor, setTransition } from "../../utils/styles"
 import { Link } from "gatsby"
-import { ThemeConsumer } from "../../context"
+import ThemeContext from "../../context"
 
 export default function Sidebar() {
   return (
-    <ThemeConsumer>
+    <ThemeContext.Consumer>
       {value => {
         const { links, sidebarOpen, handleSidebar } = value
         return (
@@ -29,7 +29,7 @@ export default function Sidebar() {
           </SideWrapper>
         )
       }}
-    </ThemeConsumer>
+    </ThemeContext.Consumer>
   )
 }
 

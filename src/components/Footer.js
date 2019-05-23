@@ -3,11 +3,11 @@ import React from "react"
 import styled from "styled-components"
 import { setColor, setTransition } from "../utils/styles"
 
-import { ThemeConsumer } from "../context"
+import ThemeContext from "../context"
 
 export default function Footer() {
   return (
-    <ThemeConsumer>
+    <ThemeContext.Consumer>
       {value => {
         return (
           <FooterWrapper>
@@ -34,7 +34,7 @@ export default function Footer() {
           </FooterWrapper>
         )
       }}
-    </ThemeConsumer>
+    </ThemeContext.Consumer>
   )
 }
 

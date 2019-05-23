@@ -4,19 +4,18 @@ import { Menu } from "styled-icons/boxicons-regular/Menu"
 import styled from "styled-components"
 import { setColor, setTransition } from "../../utils/styles"
 
-import { ThemeConsumer } from "../../context/context"
-import logo from "../../images/logo.svg"
+import ThemeContext from "../../context"
 
 export default function Navbar() {
   return (
-    <ThemeConsumer>
+    <ThemeContext.Consumer>
       {value => {
         const { handleSidebar } = value
         return (
           <NavWrapper>
             <div className="nav-center">
               <Menu size="45" className="nav-icon" onClick={handleSidebar} />
-              <img src={logo} alt="tech store logo" />
+              <h2>Eclectic Saddlebag</h2>
               <div className="social-icons">
                 {value.socialIcons.map(item => (
                   <a
@@ -34,7 +33,7 @@ export default function Navbar() {
           </NavWrapper>
         )
       }}
-    </ThemeConsumer>
+    </ThemeContext.Consumer>
   )
 }
 
@@ -56,12 +55,15 @@ const NavWrapper = styled.nav`
   .nav-icon {
     cursor: pointer;
   }
+  .nav-icon:hover {
+    color: red;
+  }
   .icon {
     margin: 20px 20px 0 0;
     justify-content: space-between;
     transition: ${setTransition({ time: "0.3s" })};
   }
-  .icon:hover {
+  .icon:active {
     color: #3b5998;
     cursor: pointer;
   }
