@@ -1,10 +1,10 @@
-import React from "react"
-import { Menu } from "styled-icons/boxicons-regular/Menu"
+import React from 'react'
+import { Menu } from 'styled-icons/boxicons-regular/Menu'
 
-import styled from "styled-components"
-import { setColor, setTransition } from "../../utils/styles"
+import styled from 'styled-components'
+import { setColor, setTransition } from '../../utils/styles'
 
-import ThemeContext from "../../context"
+import ThemeContext from '../../context'
 
 export default function Navbar() {
   return (
@@ -16,7 +16,7 @@ export default function Navbar() {
             <div className="nav-center">
               <Menu size="45" className="nav-icon" onClick={handleSidebar} />
               <h2>Eclectic Saddlebag</h2>
-              <div className="social-icons">
+              <div className="mb-0">
                 {value.socialIcons.map(item => (
                   <a
                     href={item.url}
@@ -61,7 +61,7 @@ const NavWrapper = styled.nav`
   .icon {
     margin: 20px 20px 0 0;
     justify-content: space-between;
-    transition: ${setTransition({ time: "0.3s" })};
+    transition: ${setTransition({ time: '0.3s' })};
   }
   .icon:active {
     color: #3b5998;
@@ -69,7 +69,7 @@ const NavWrapper = styled.nav`
   }
   .facebook-icon {
     color: ${setColor.primaryBase};
-    transition: ${setTransition({ time: "0.3s" })};
+    transition: ${setTransition({ time: '0.3s' })};
   }
   .facebook-icon:hover {
     color: #3b5998;
@@ -77,7 +77,7 @@ const NavWrapper = styled.nav`
   }
   .twitter-icon {
     color: ${setColor.primaryBase};
-    transition: ${setTransition({ time: "0.3s" })};
+    transition: ${setTransition({ time: '0.3s' })};
   }
   .twitter-icon:hover {
     color: #1da1f2;
@@ -85,7 +85,7 @@ const NavWrapper = styled.nav`
   }
   .instagram-icon {
     color: ${setColor.primaryBase};
-    transition: ${setTransition({ time: "0.3s" })};
+    transition: ${setTransition({ time: '0.3s' })};
   }
   .instagram-icon:hover {
     color: #e95950;

@@ -1,21 +1,23 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
-import styled from "styled-components"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
 
-import { breakpoints, setRem, setColor } from "../utils/styles"
-import Seo from "../components/Seo"
-import Layout from "../components/Layouts/Layout"
-import { HomeHeader } from "../components/Hero"
-import { GlobalStyles } from "../utils/GlobalStyles"
-import { Section } from "../components/Section/Section"
-import { Title } from "../components/Section/Title"
-import { QuickInfo } from "../components/Section/QuickInfo"
-import { SectionButton } from "../utils"
-import Container from "../components/Container"
-import PostHeader from "../components/Posts/PostHeader"
-import PostDate from "../components/Posts/PostDate"
-import PostContent from "../components/Posts/PostContent"
+import { breakpoints, setRem, setColor } from '../utils/styles'
+import '../styles/custom.scss'
+
+import Seo from '../components/Seo'
+import Layout from '../components/Layouts/Layout'
+import { HomeHeader } from '../components/Hero'
+import { GlobalStyles } from '../utils/GlobalStyles'
+import { Section } from '../components/Section/Section'
+import { Title } from '../components/Section/Title'
+import { QuickInfo } from '../components/Section/QuickInfo'
+import { SectionButton } from '../utils'
+import Container from '../components/Container'
+import PostHeader from '../components/Posts/PostHeader'
+import PostDate from '../components/Posts/PostDate'
+import PostContent from '../components/Posts/PostContent'
 
 const PostBox = styled.div`
   display: flex;
@@ -48,26 +50,20 @@ class BlogIndex extends React.Component {
       <div>
         <GlobalStyles />
         <Layout location={this.props.location} title={siteTitle}>
-          <Seo title="Home" keywords={["About", "Chuck Smith"]} />
+          <Seo title="Home" keywords={['About', 'Chuck Smith']} />
           <HomeHeader fluid={data.hero.edges[0].node.fluid} />
           <Section color={setColor.neutralLightest}>
-            <Title message={"Life is random"} title={"My Random Thoughts"} />
+            <Title message={'Life is random'} title={'My Random Thoughts'} />
             <QuickInfo
               message={
-                "Life is a journey, and along the way, we all collect thoughts, experiences, and learn.The word <em> eclectic</em> best describes this collection, a collection which can be described as random.Here on this site, you can learn a little about me, engage of the random thoughts I have, and experience a little of what I have."
+                'Life is a journey, and along the way, we all collect thoughts, experiences, and learn.The word <em> eclectic</em> best describes this collection, a collection which can be described as random.Here on this site, you can learn a little about me, engage of the random thoughts I have, and experience a little of what I have.'
               }
             />
-            <Link to="/about" style={{ textDecoration: `none` }}>
-              <SectionButton style={{ margin: `2rem auto` }}>
-                About
-              </SectionButton>
+            <Link to="/about" className="text-decoration-none">
+              <SectionButton className="my-2 mx-auto">About</SectionButton>
             </Link>
           </Section>
-          <Title
-            style={{ paddingTop: "1rem" }}
-            message={""}
-            title={"Latest Articles"}
-          />
+          <Title className="pt-2" message={''} title={'Latest Articles'} />
 
           <Container>
             {posts.map(({ node }) => {
@@ -84,7 +80,7 @@ class BlogIndex extends React.Component {
                   <PostBox>
                     <PostImage>
                       <Img
-                        style={{ borderRadius: `5%` }}
+                        className="rounded"
                         fluid={node.frontmatter.image.childImageSharp.fluid}
                       />
                     </PostImage>

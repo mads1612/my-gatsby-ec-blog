@@ -1,11 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styled from "styled-components"
-import { GlobalStyles } from "../../utils"
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import Navbar from "../Navbar"
-import Sidebar from "../Navbar/Sidebar"
-import Footer from "../Footer"
+import Navbar from '../Navbar'
+import Sidebar from '../Navbar/Sidebar'
+import Footer from '../Footer'
+
+import styled from 'styled-components'
+import { GlobalStyles } from '../../utils'
 
 const Body = styled.div`
   display: flex;

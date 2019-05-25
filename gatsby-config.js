@@ -1,4 +1,4 @@
-const config = require("./data/config")
+const config = require('./data/config')
 
 module.exports = {
   siteMetadata: {
@@ -68,6 +68,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
