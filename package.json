@@ -9,40 +9,47 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.3.27",
-    "gatsby-image": "^2.0.40",
-    "gatsby-plugin-feed": "^2.1.1",
-    "gatsby-plugin-google-analytics": "^2.0.18",
-    "gatsby-plugin-manifest": "^2.0.29",
-    "gatsby-plugin-offline": "^2.0.25",
+    "bootstrap": "^4.3.1",
+    "gatsby": "^2.7.1",
+    "gatsby-image": "^2.1.1",
+    "gatsby-plugin-feed": "^2.2.1",
+    "gatsby-plugin-google-analytics": "^2.0.20",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-offline": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-plugin-sharp": "^2.1.1",
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-remark-copy-linked-files": "^2.0.12",
-    "gatsby-remark-images": "^3.0.11",
-    "gatsby-remark-prismjs": "^3.2.8",
+    "gatsby-remark-images": "^3.0.12",
+    "gatsby-remark-prismjs": "^3.2.9",
     "gatsby-remark-responsive-iframe": "^2.1.1",
     "gatsby-remark-smartypants": "^2.0.9",
-    "gatsby-source-filesystem": "^2.0.31",
-    "gatsby-transformer-json": "^2.1.11",
-    "gatsby-transformer-remark": "^2.3.10",
-    "gatsby-transformer-sharp": "^2.1.18",
-    "polished": "^3.3.0",
+    "gatsby-source-filesystem": "^2.0.37",
+    "gatsby-transformer-remark": "^2.3.12",
+    "gatsby-transformer-sharp": "^2.1.19",
+    "polished": "^3.3.2",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
+    "react-helmet": "^5.2.1",
     "styled-components": "^4.2.0",
-    "styled-icons": "^7.10.0",
+    "styled-icons": "^7.15.1",
     "styled-normalize": "^8.0.6",
-    "styled-reset": "^2.0.8",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.54"
+    "styled-reset": "^2.0.12"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "eslint-plugin-react": "^7.12.4",
-    "prettier": "^1.17.0"
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1",
+    "pretty-quick": "^1.11.0"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
@@ -60,6 +67,18 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "husky": {
+      "hooks": {
+        "precommit": "NODE_ENV=production lint-staged"
+      }
+    },
+    "lint-staged": {
+      "*.{js,jsx}": [
+        "pretty-quick --staged",
+        "eslint src/ --fix",
+        "git add"
+      ]
+    }
   }
 }
