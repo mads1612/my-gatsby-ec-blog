@@ -1,11 +1,11 @@
 const path = require(`path`)
-const _ = require("lodash")
+const _ = require('lodash')
 
 const formatStrForPath = str =>
   str
     .toLowerCase()
-    .split(" ")
-    .join("-")
+    .split(' ')
+    .join('-')
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
@@ -14,18 +14,18 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode })
-    const separatorIndex = ~slug.indexOf("--") ? slug.indexOf("--") : 0
+    const separatorIndex = ~slug.indexOf('--') ? slug.indexOf('--') : 0
     const shortSlugStart = separatorIndex ? separatorIndex + 2 : 0
 
     createNodeField({
       name: `slug`,
       node,
-      value: `${separatorIndex ? "/" : ""}${slug.substring(shortSlugStart)}`,
+      value: `${separatorIndex ? '/' : ''}${slug.substring(shortSlugStart)}`,
     })
     createNodeField({
       node,
       name: `prefix`,
-      value: separatorIndex ? slug.substring(1, separatorIndex) : "",
+      value: separatorIndex ? slug.substring(1, separatorIndex) : '',
     })
   }
 }
@@ -35,14 +35,14 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const postTemplate = path.resolve(`./src/templates/blog-post.js`)
-    const CategoriesTemplate = path.resolve("src/templates/CategoryTemplate.js")
+    const CategoriesTemplate = path.resolve('src/templates/CategoryTemplate.js')
 
     // Do not create draft post files in production.
     let activeEnv =
-      process.env.ACTIVE_ENV || process.env.NODE_ENV || "development"
+      process.env.ACTIVE_ENV || process.env.NODE_ENV || 'development'
     console.log(`Using environment config: '${activeEnv}'`)
     let filters = `filter: { fields: { slug: { ne: null } } }`
-    if (activeEnv == "production")
+    if (activeEnv == 'production')
       filters = `filter: { fields: { slug: { ne: null } , prefix: { ne: null } } }`
     resolve(
       graphql(
@@ -74,25 +74,6 @@ exports.createPages = ({ graphql, actions }) => {
         if (result.errors) {
           reject(result.errors)
         }
-
-        //   Create ExcerptList(blog) page
-        //   const postsPerPage = 5
-        //   const numPages = Math.ceil(posts.length / postsPerPage)
-
-        //   Array.from({
-        //       length: numPages,
-        //   }).forEach((_, i) => {
-        //       createPage({
-        //           path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-        //           component: ExcerptList,
-        //           context: {
-        //               limit: postsPerPage,
-        //               skip: i * postsPerPage,
-        //               numPages,
-        //               currentPage: i + 1,
-        //           },
-        //       })
-        //   })
 
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges
@@ -163,7 +144,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create All Categories page
         createPage({
-          path: "categories",
+          path: 'categories',
           component: CategoriesTemplate,
           context: {
             categories: Array.from(categories),
