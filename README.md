@@ -14,6 +14,8 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 ## 🚀 Quick start
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/polishedwp/my-gatsby-ec-blog.svg)](https://greenkeeper.io/)
+
 1.  **Create a Gatsby site.**
 
     Use the Gatsby CLI to create a new site, specifying the blog starter.
